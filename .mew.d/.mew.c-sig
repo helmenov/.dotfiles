@@ -1,0 +1,11 @@
+;;;c-sig
+;; Mewでシグネチャを対話的に選択する
+;; M-x add-signatureで登録
+;; Draftモードで C-c C-w すると選択。p:前、n:次 
+(setq mew-send-hook
+   (function
+    (lambda ()
+       (define-key mew-draft-body-map "\C-c\C-w" 'insert-signature-eref)
+       (let ((p (point)))
+        (goto-char (point-max))
+   ))))

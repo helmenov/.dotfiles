@@ -1,0 +1,74 @@
+;; $Id: mew.el,v 1.2 2004/10/23 19:08:15 nabeken Exp $
+;(require 'mew-absfilter)
+;(mew-absfilter-mode 0)
+; put "D"
+;;(defun mew-spam-bsfilter (val)
+;;  (let ((case-fold-search t))
+;;    (if (string-match "yes" val) ?D)))
+
+; put "o +sapm" at inc
+(defun mew-spam-bsfilter (val)
+  (let ((case-fold-search t))
+    (if (string-match "yes" val) "%spam")))
+
+(setq mew-inbox-action-alist
+      '(("X-Spam-JudgedByKotaro1976-Flag:" mew-spam-bsfilter)))
+
+; for "ls" (learn-spam)
+(setq mew-spam-prog "/usr/local/bin/bsfilter")
+;(setq mew-spam-prog-args '("-s" "-u"))
+(setq mew-spam-prog-args '("-C" "-s" "-u"))
+
+; for "lh" (learn-ham)
+(setq mew-ham-prog "/usr/local/bin/bsfilter")
+;(setq mew-ham-prog-args '("-c" "-u"))
+(setq mew-ham-prog-args '("-S" "-c" "-u"))
+
+(setq mew-prog-grep "/usr/local/bin/bsfilter")
+(setq mew-prog-grep-opts '("-q" "--list-spam"))
+
+; for "bm" (mark-spam)
+;;(define-key mew-summary-mode-map "bm" 'mew-summary-bsfilter-mark-region)
+
+;;(defun mew-summary-bsfilter-mark-region (&optional arg)
+;;  "study/judge the region and put the '*' mark onto spams.
+;;need to re-learn if judgment of bsfilter is wrong"
+;;  (interactive "P")
+;;  (mew-pickable
+;;   (let ((func 'mew-summary-pick-with-cmd)
+;;	 (mew-inherit-grep-cmd "bsfilter -a --list-spam"))
+;;     (mew-summary-pick-body func t nil 'nopattern))))
+
+; show X-Spam-Flag and X-Spam-Probability in message buffer
+(setq mew-field-spec
+      (reverse (append (list (car (reverse mew-field-spec)))
+		       '(("^X-Spam-Probability:$" t)
+			 ("^X-NNIPF-SPAM:$" t)
+			 ("^X-Spam-JudgedByKotaro1976-Probability:$" t)
+			 ("^X-Virus-Status:$" t)
+			 ("^Authentication-Results:$" t)
+			 ("^DomainKeys-Signature:$" t)
+			 ("^X-Barracuda-Spam-Score:$" t)
+			 ("^Return-Path:$" t)
+			 ("^Delivered-To:$" t)
+			 )
+		       (cdr (reverse mew-field-spec)))))
+
+
+;; bsfilter --imap --imap-fetch-unflagged --insert-flag --insert-probability --imap-folder-spam inbox.spam inbox
+
+;;;;-- spf filter --
+;;(setq mew-spam: "Authentication-Results:")
+;;(defun mew-spf-check (val)
+;;  (let ((case-fold-serach t))
+;;    (if (string-match "fail" val) ?D)))
+;;   
+;;(setq mew-inbox-action-alist
+;;;;      '((("X-Spam-Flag:"  mew-spam-assassin))
+;;       '(("Authentication-Results:"  mew-spf-check))
+;;;;       '(("Received-SPF:"  mew-spf-check))
+;;)
+
+;;1
+
+

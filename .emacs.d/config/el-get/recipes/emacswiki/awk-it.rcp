@@ -1,0 +1,5 @@
+	(:name awk-it
+	:auto-generated t
+	:type emacswiki
+	:description "Little utility that combines awk and yasnippet."
+	:website "https://raw.github.com/emacsmirror/emacswiki.org/master/awk-it.el")

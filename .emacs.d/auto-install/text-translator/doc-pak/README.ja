@@ -1,0 +1,75 @@
+text-translator は、インターネット上に存在するテキスト翻訳サービスを利用
+して Emacs 上で文字列の翻訳を行う elisp パッケージです。
+
+* インストール
+
+以下の elisp ファイルをロードパスの通った場所に置く。
+
+ - text-translator.el
+ - text-translator-vars.el
+ - text-translator-sites.el
+ - text-translator-window.el
+
+Makefile も使えます。
+
+ $ make
+ $ make install
+
+** autoload を使う
+
+(require 'text-translator-load)
+
+** require を使う
+
+;;;; autoload ではなく、require を使う場合
+(require 'text-translator)
+
+** グローバルキーを設定する
+
+;; グローバルキーの設定例
+(global-set-key "\C-x\M-t" 'text-translator)
+(global-set-key "\C-x\M-T" 'text-translator-all)
+
+\C-x\M-t で選択した文字列を選択した言語で翻訳できます。
+\C-x\M-T で選択した文字列を選択した言語で翻訳可能な全てのエンジンを使って
+翻訳できます。
+
+** プロキシを使用する
+
+;; ;; プロキシを使用する場合の設定例
+;; ;; 環境変数 HTTP_PROXY を設定してある場合は、設定不要。
+;; (setq text-translator-proxy-server "proxy.hogehoge.com")
+;; (setq text-translator-proxy-port   8080)
+
+** 自動選択を使用する(日本語/英語のみ)
+
+;; 自動選択に使用する関数を設定
+(setq text-translator-auto-selection-func
+      'text-translator-translate-by-auto-selection-enja)
+;; グローバルキーを設定
+(global-set-key "\C-xt" 'text-translator-translate-by-auto-selection)
+
+* 翻訳サイト
+
+- google.com
+- yahoo.com
+- freetranslation.com
+- livedoor.com
+- fresheye.com
+- excite.co.jp
+- yahoo.co.jp (現在利用不能)
+- ocn.ne.jp
+- lou5.jp
+- traduku.net
+
+* 謝辞
+
+この text-translator.el を作成するにあたり、ブログのコメントやメールで多
+数のアドバイスを頂きました。ありがとうございます。
+
+# README.ja ends here
+
+# Local Variables:
+# mode: outline
+# mode: auto-fill
+# End:

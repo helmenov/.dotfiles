@@ -1,0 +1,48 @@
+(setq mew-prog-octet-stream '(mew-mime-application/octet-stream
+            mew-mime-application/octet-ext))
+
+(defun mew-mime-application/octet-ext (cache begin end &optional parameter)
+  (save-excursion
+    (set-buffer (mew-buffer-message))
+    (goto-char (point-min))
+    (let (fname ext func ct conv)
+      (when (or (and (re-search-forward "^Filename:\t+\\([^\n]+\\)$" nil t)
+         (setq fname (match-string 1)))
+    (setq fname (nth 1 (assoc "name" parameter))))
+  (when (string-match "\\.\\([^.]+\\)$" fname)
+    (setq ext (downcase (match-string 1 fname)))))
+      (cond
+       ((and ext (string= "doc" ext))
+  (setq func 'mew-mime-application/msword))
+       ((and ext (string= "xls" ext))
+  (setq func 'mew-mime-application/msexcel))
+       ((and ext (string= "ppt" ext))
+  (setq func 'mew-mime-application/mspowerpoint))
+       ((and ext (string= "pdf" ext))
+  (setq func 'mew-mime-application/pdf))
+       ((and ext (string-match "^html?$" ext))
+  (setq conv t)
+  (setq func 'mew-mime-text/html))
+       ((and ext (setq ext (assoc ext
+          '(("tif" . "Image/Tiff")
+            ("tiff" . "Image/Tiff")
+            ("jpg" . "Image/Jpeg")
+            ("jpeg" . "Image/Jpeg")
+            ("png" . "Image/Png")
+            ("gif" . "Image/Gif")
+            ("xwd" . "Image/X-Xwd")
+            ("xpm" . "Image/X-Xpm")
+            ("xbm" . "Image/X-Xbm")
+            ("bmp" . "Image/X-Bmp")))))
+  (setq ct (cdr ext))
+  (setq func 'mew-mime-image/*)))
+      (if func
+    (mew-elet
+     (mew-erase-buffer)
+     (if ct
+         (funcall func cache begin end parameter ct)
+       (funcall func cache begin end parameter))
+     (when conv
+       (decode-coding-region (point-min) (point-max) 'undecided))
+     (mew-summary-display-postscript 'nohook))
+  (message "Nothing to do")))))

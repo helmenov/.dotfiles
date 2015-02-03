@@ -1,0 +1,2 @@
+(setq mail-user-agent 'mew-user-agent)
+

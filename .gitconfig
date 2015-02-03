@@ -1,0 +1,39 @@
+[user]
+	name = Kotaro Sonoda
+	email = sonoda-gitlab@cis.nagasaki-u.ac.jp
+[core]
+	editor = emacs
+	excludesfile = /home/kotaro/.gitignore
+	quotepath = false
+	autocrlf = false
+	precomposeunicode = true
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+[difftool.latex]
+	cmd = ~/bin/git-latexdiff \"$LOCAL\" \"$REMOTE\" 
+[difftool]
+	prompt = false
+[push]
+	default = current
+[diff]
+	tool = meld
+[pull]
+	rebase = true
+[branch]
+	autosetuprebase = always
+[merge]
+	ff = false
+	conflictstyle = diff3
+[git-media]
+	transport = scp
+	autodownload = true
+	scpuser = kotaro
+	scphost = 
+	scppath = 
+
+[alias]
+	ci = commit

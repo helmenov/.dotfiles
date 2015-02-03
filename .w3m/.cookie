@@ -1,0 +1,23 @@
+;;; .cookie  -*- mode: emacs-lisp; coding: iso-2022-7bit -*-
+;; This file is generated automatically by emacs-w3m v1.4.538.
+
+(["http://benesse.jp/blog/20140924/p4.html" "benesse.jp" nil "KJtoken" "133.45.130.185.1411526159299529" "/" 0 "Sat, 21-Sep-24 02:35:59 GMT" nil]
+["https://docs.google.com/forms/d/1p-oNEVqneuHIesEGVSxMkHcUG-8p2TGWSro6IjvHLww/viewform" ".google.com" nil "HttpOnly" nil "/" 0 "Thu, 26-Mar-2015 02:35:39 GMT" nil]
+["https://docs.google.com/forms/d/1p-oNEVqneuHIesEGVSxMkHcUG-8p2TGWSro6IjvHLww/viewform" ".google.com" nil "NID" "67=GcfGKfhgq0RvMXvF3ktbrxUFiVnQ3slzg7txLItTygO7sNf3HZnndGlMHz1O-mNxwctNZtIhINu4Tcpd0th9VLtvuYzK2WJIvMaAXaAxj82dJOZ9Ji4ai5fQzPmWs4An" "/" 0 "Thu, 26-Mar-2015 02:35:39 GMT" nil]
+["http://f.hatena.ne.jp/daigaku-syokuin/20090531232525" ".hatena.ne.jp" nil "b" "$1$R9RzWEmZ$8EdDeD6m0TL.JhgB5Ow4e1" "/" 0 "Tue, 19-Sep-34 02:31:54 GMT" nil]
+["http://global.yamaha-motor.com/jp/news/2014/0723/revtranslator.html#.U89K9oFfJGs.twitter" ".yamaha-motor.com" nil "visid_incap_64884" "SidtsH3tSOmg2BoDTbEN+Wlrz1MAAAAAQUIPAAAAAACgZXnairq0gpxn5SmYIWvl" "/" 0 "Thu, 21 Jul 2016 15:35:50 GMT" nil]
+["http://bit.ly/1nxsT3w" ".bit.ly" nil "_bit" "53d78d3d-001a7-07989-cd1cf10a" "/" 0 "Sun Jan 25 12:02:05 2015" nil]
+["http://bit.ly/1nxsT3w" ".bit.ly" nil "HttpOnly" nil "/" 0 "Sun Jan 25 12:02:05 2015" nil]
+["http://kimyonggyu.blog.fc2.com/blog-entry-1141.html" ".fc2.com" nil "bloguid" "3a31fbe5-96b1-44ef-8772-8ba3c46a7580" "/" 0 "Sat, 29-Aug-2015 02:17:42 GMT" nil]
+["http://www.google.com/search?q=%E8%B2%AF%E9%87%91%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%AB%E6%8A%95%E8%B3%87%E4%BF%A1%E8%A8%97&hl=ja&lr=lang_ja&ie=utf-8&oe=utf-8" ".google.com" nil "PREF" "ID=51c60053738b1188:U=589605c797f76a7e:FF=0:TM=1409280882:LM=1409280907:S=KfddsVQeeHc3LBjt" "/" 0 "Sun, 28-Aug-2016 02:55:07 GMT" nil]
+["http://chiebukuro.yahoo.co.jp/tag/tags.php?tag=%E8%B2%AF%E9%87%91%E4%BB%A3%E3%82%8F%E3%82%8A%2C%E6%8A%95%E8%B3%87%E4%BF%A1%E8%A8%97" ".yahoo.co.jp" nil "B" "biv255t9vvqvv&b=3&s=ku" "/" 0 "Mon, 29-Aug-2016 02:57:03 GMT" nil]
+["http://plaza.rakuten.co.jp/15happy24/diary/?ctgy=7" ".plaza.rakuten.co.jp" nil "cuid" "1409281552%3A1409281552%3A0" "/" 0 "Sat, 29-Aug-2015 03:05:52 GMT" nil]
+["http://t.co/sUgEfBXTcF" "t.co" nil "muc" "e5b468b0-1c63-41ed-bfbb-15f02060c0a8" "/" 0 "Wed, 07 Sep 2016 01:02:08 GMT" nil]
+["https://twitter.com/matsudaatsushi/status/515146575056625664/photo/1" ".twitter.com" nil "guest_id" "v1%3A141169332927140017" "/" 0 "Sun, 25-Sep-2016 01:02:09 UTC" nil]
+["https://www.facebook.com/photo.php?fbid=635188739935161&_fb_noscript=1" ".facebook.com" nil "datr" "0RwqVMtavrQT7kqVdLCm1l_B" "/" 0 "Thu, 29-Sep-2016 03:00:33 GMT" nil]
+["https://www.facebook.com/photo.php?fbid=635188739935161&_fb_noscript=1" ".facebook.com" nil "httponly" nil "/" 0 "Thu, 29-Sep-2016 03:00:33 GMT" nil]
+["http://find-travel.jp/article/3559" "find-travel.jp" nil "SESSFT" "62cbfg2h6k421emdgm0el6rr66" "/" 0 "Thu, 29-Sep-2016 06:36:06 GMT" nil]
+["http://find-travel.jp/article/3559" "find-travel.jp" nil "Max-Age" "63072000" "/" 0 "Thu, 29-Sep-2016 06:36:06 GMT" nil]
+["http://www.amazon.co.jp/gp/product/B00MIY5VPU" ".amazon.co.jp" nil "x-wl-uid" "1z1qOZByNSylpL5dgq+WQ+H177batL52xxUSfcJvKbXMGj6LtFr3k4kgjwUqco+DDlqly9wqizOs=" "/" 0 "Mon, 31-Dec-2035 15:00:01 GMT" nil]
+["http://www.amazon.co.jp/gp/product/B00MIY5VPU" ".amazon.co.jp" nil "session-id-time" "2082726001l" "/" 0 "Mon, 31-Dec-2035 15:00:01 GMT" nil]
+["http://www.amazon.co.jp/gp/product/B00MIY5VPU" ".amazon.co.jp" nil "session-id" "377-9524364-9821356" "/" 0 "Mon, 31-Dec-2035 15:00:01 GMT" nil])

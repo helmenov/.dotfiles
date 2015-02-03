@@ -1,0 +1,5 @@
+	(:name font-menus-da
+	:auto-generated t
+	:type emacswiki
+	:description "Additional font menus."
+	:website "https://raw.github.com/emacsmirror/emacswiki.org/master/font-menus-da.el")

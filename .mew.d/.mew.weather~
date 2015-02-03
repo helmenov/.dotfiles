@@ -1,0 +1,5 @@
+;; -*- Coding:euc-jp -*-
+(add-hook 'mew-draft-mode-hook
+          '(lambda ()
+             (weather-insert-header "Ä¹ºê¸©ÆîÉô¡¤ËÌÉô¡¤¸ŞÅç")))
+;;             (weather-insert-header "Ä¹ºê¸©")))

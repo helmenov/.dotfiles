@@ -1,0 +1,502 @@
+(setq mew-debug t) ; decode,encode,net,pgp,thread,t,nil
+                                        ;(setq debug-on-error t)
+(setq mew-delete-temp-file nil)
+(load-file "~/.mew.d/.mew.c-sig")
+(load-file "~/.mew.d/.mew.gcontacts")
+;;(load-file "~/.mew.d/.mew.weather")
+(load-file "~/.mew.d/.mew.bsfilter")
+                                        ;(load-file "~/.mew.d/.mew.nnipfmh")
+                                        ;(load-file "~/.mew.d/.mew.shimbun")
+(load-file "/home/kotaro/.mew.izonmoji")
+;;(load-file "/home/kotaro/.mew.ldap")
+;;(load-file "/home/kotaro/.mew.hankakukana") ;;������ʸ�������
+(load-file "/home/kotaro/.mew.fortune")
+;;(load-file "/home/kotaro/.mew.CcCe")
+(load-file "/home/kotaro/.mew.xml")
+;;(load-file "/home/kotaro/.mew.w3m-mail")
+
+(setq mew-prog-ssl "/usr/bin/stunnel4")
+(setq mew-ssl-cert-directory "/etc/ssl/certs")
+
+(setq mew-field-spec
+      (reverse (append (list (car (reverse mew-field-spec)))
+                       '(
+                         )
+                       (cdr (reverse mew-field-spec)))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; A sample file of .mew.el
+;;;
+;
+; This is just a sample. You should customize as you like...
+;
+
+(setq mew-config-alist
+      '(
+        (default
+          (name              "Kotaro Sonoda")
+          (user              "kotaro1976")
+          (mail-domain       "gmail.com")
+	  (ssl-verify-level  2)
+	  ;;  
+	  ;; For IMAP
+          ;;
+          (proto             "%")
+          (imap-user         "kotaro1976")
+          (imap-server       "imap.gmail.com")
+	  (imap-port         143)
+          (imap-ssl          t)
+          (imap-ssl-port     993)
+	  ;;          (imap-delete       nil)
+          (imap-auth         t)
+	  ;;          (imap-size         0)
+	  (imap-header-only  nil)
+	  (imap-trash-folder "%[Gmail]/Bin")
+	  (imap-draft-folder "%[Gmail]/Drafts")
+	  (smtp-user         "kotaro1976")
+	  (smtp-server       "smtp.gmail.com")
+	  (smtp-ssl          t)
+	  (use-smtp-auth     t)
+	  (smtp-ssl-port     "465")
+          )
+         (cis
+	  ;; ;;         (signature-file    "~/.emacs.d/.signature")
+	  (name              "Kotaro Sonoda")
+	  (user              "sonoda")
+	  (mail-domain       "cis.nagasaki-u.ac.jp")
+	  ;; ;;         (ssl-verify-level  0)
+	  ;; setting for IMAP
+	  (proto             "%")
+	  (imap-user         "kotaro")
+	  (imap-server       "mboxhost.nagasaki-u.ac.jp")
+	  (imap-port         143)
+          (imap-ssl          nil)
+	  (imap-auth         t)
+	  (imap-header-only  nil)
+	  (imap-trash-folder "%Trash")
+	  (imap-draft-folder "%Drafts")
+	  (smtp-server	     "mailserver.cis.nagasaki-u.ac.jp")
+	  (smtp-user	     "sonoda")
+	  (smtp-ssl          nil)
+	  (use-smtp-auth     nil)
+          )
+	 (amu
+	  (name              "Kotaro Sonoda")
+	  (user              "kotaro")
+	  (mail-domain       "amu.edu.pl")
+	  ;; ;;         (ssl-verify-level  0)
+	  ;; setting for IMAP
+	  (proto             "%")
+	  (imap-user         "kotaro")
+	  (imap-server       "imap.amu.edu.pl")
+	  (imap-port         143)
+	  (imap-ssl          t)
+	  (imap-ssl-port     993)
+	  (imap-auth         t)
+	  (imap-header-only  nil)
+	  (imap-trash-folder "%Trash")
+	  (imap-draft-folder "%Drafts")
+	  (smtp-user         "kotaro1976")
+	  (smtp-server       "smtp.gmail.com")
+	  (smtp-ssl          t)
+	  (use-smtp-auth     t)
+	  (smtp-ssl-port     "465")
+	  )
+	))
+
+(setq 
+      mew-use-biff t
+      mew-pop-delete nil
+      mew-imap-delete nil
+      mew-pop-size 0
+      mew-imap-size 0
+      mew-nntp-size 0
+      mew-use-submission t
+      mew-ask-newsgroups t
+      mew-ask-subject t
+      mew-use-sender t
+      mew-dcc "kotaro1976+univ@gmail.com"
+      mew-auto-get nil
+      mew-use-cached-passwd t
+      mew-summary-preserve-dir t
+)
+;; 未読メッセージに "U" (未読マーク) をつける
+(setq mew-use-unread-mark t)
+;; From ヘッダの "" で囲まれた文字も MIME デコードする
+(setq mew-decode-quoted t)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Citation tip
+;;;
+;;;
+;;; From: Kazu-kun
+;;; Subject: Hello World
+;;; Date: Thu, 08 Dec 1994 11:44:08 +0900
+;;; Message-Id: <199509291309.WAA21663@example.org>
+;;;
+;;; Kazu-kun> The quick brown fox jumped over the very lazy dog.
+;;;
+
+;;(setq mew-cite-fields '("From:" "Subject:" "Date:" "Message-ID:"))
+;;(setq mew-cite-format "From: %s\nSubject: %s\nDate: %s\nMessage-ID: %s\n\n")
+;(setq mew-cite-prefix-function 'mew-cite-prefix-username)
+;(setq mew-addrbook-for-cite-label 'nickname)
+;(setq mew-addrbook-for-cite-prefix 'nickname)
+
+(setq mew-cite-prefix "> ")
+(setq mew-cite-fields '("Message-ID:" "Date:" "From:"))
+(setq mew-cite-format "\n// === In MsgID: %s\n// === \tDate: %s\n// === \t%s wrote:\n")
+;;== From: mew-addrbook-for-cite-label ==
+;;default:nil(引用From:)
+(setq mew-addrbook-for-cite-label nil)
+
+;;== 引用記号の前に文字列を置く
+;;(setq mew-cite-prefix-function 'mew-cite-prefix-username)
+
+;;== 引用記号の前置文字列 mew-addrbook-for-cite-prefix ==
+;;default:username
+(setq mew-addrbook-for-cite-prefix 'name)
+
+;;== サマリモードにおける名前==
+;;default:nickname
+(setq mew-addrbook-for-summary 'nickname)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Pick macro
+;;;
+
+(mew-pick-define-macro "tocc=#" "to=#|cc=#")
+;(mew-pick-define-macro "mew" "tocc=mew")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; ? and /
+;;;
+
+;; To whose who want to search Japanese key in the entire of messages.
+;; ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/mg-xxx
+;; ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/jcode-xxx.pl
+;;
+;; (setq mew-prog-grep "mg")
+;;
+;; 1. Search an EUC key (after converting to JIS) on JIS messages.
+;; (setq mew-prog-grep-opts '("-j" "jis" "-l" "-e"))
+;;
+;; 2. Search an EUC key (after converting to JIS) on JIS messages
+;;    decoding their encoded-words.
+;; (setq mew-prog-grep-opts '("-j" "jis" "-l" "-e" "-x" "&mime"))
+;;
+;; 3. Search an EUC key on JIS messages after converting to EUC by nkf.
+;; (setq mew-prog-grep-opts '("-l" "-e" "-z" "nkf -e"))
+;;
+;; 4. Search an EUC key on JIS messages after converting to EUC
+;;    and decoding their encoded-words by nkf. Make sure that
+;;    "nkf" has the "-m" option.
+;; (setq mew-prog-grep-opts '("-l" "-e" "-z" "nkf -e -m"))
+;;
+;;
+;; Also, set mew-prog-vgrep and mew-prog-vgrep-opts
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Using "Mozilla"
+;;;
+
+;(setq mew-prog-text/html-ext "iceweasel")
+(setq mew-prog-text/html-ext "google-chrome")
+
+(define-key mew-message-mode-map [mouse-2] 'browse-url-at-mouse)
+(setq browse-url-netscape-program "w3m")
+(setq thing-at-point-url-path-regexp "[~/A-Za-z0-9---_.${}#%,:]+")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Using "w3m" with "emacs-w3m"
+;;;
+;;; w3m: please use w3m-m17n based on m3m 0.2.5 (or greater maybe).
+;;;	http://www2u.biglobe.ne.jp/~hsaka/w3m/
+;;;
+;;; emacs-w3m:
+;;;     cvs -d :pserver:anonymous@cvs.namazu.org:/storage/cvsroot login
+;;;     cvs -d :pserver:anonymous@cvs.namazu.org:/storage/cvsroot co emacs-w3m
+
+
+(setq mew-mime-multipart-alternative-list '("Text/Plain" "Text/Html" "*."))
+
+(condition-case nil
+    (require 'mew-w3m)
+  (file-error nil))
+
+(setq mew-prog-text/html-ext "w3m")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Using "wvHtml", "xlhtml", and "ppthtml"
+;;;
+;;; Unicode is necessary. Emacs 22.0.50 or later includes Unicode by 
+;;; default. For earlier versions, install Mule-UCS.
+;;;
+;;;     ftp://ftp.m17n.org/pub/mule/Mule-UCS/
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Using "wvHtml"
+;;;	http://www.wvware.com/
+;;;
+;;; The default configuration is for the version greater than 
+;;; or equal to 0.7. For the version prior to 0.7, set as follows:
+
+;(setq mew-use-old-wvhtml t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Using "xlhtml" and "ppthtml"
+;;;	http://chicago.sourceforge.net/xlhtml/
+;;;
+;;; The default configuration is for the version greater than 
+;;; or equal to 0.3. For the version prior to 0.3, set as follows:
+
+;(setq mew-prog-application/msexcel "xlHtml")
+;(setq mew-prog-application/mspowerpoint "pptHtml")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Using OpenOffice.org (openoffice)
+;;;
+
+;(setq mew-prog-msword '("openoffice" nil t))
+;(setq mew-prog-msexcel '("openoffice" nil t))
+;(setq mew-prog-mspowerpoint '("openoffice" nil t))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Using StarSuite (soffice)
+;;;
+
+;(setq mew-prog-msword '("soffice" nil t))
+;(setq mew-prog-msexcel '("soffice" nil t))
+;(setq mew-prog-mspowerpoint '("soffice" nil t))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; X-Face:
+;;;
+
+;; New "uncompface" which produces the XBM format directly if the "-X" 
+;; option is specified. Hence, "ikon2xbm" is unnecessary.
+(setq mew-x-face-filter `((,mew-prog-uncompface "-X")))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Replying messages and character set
+;;;
+(setq mew-reply-all-alist
+  `(("Mail-Followup-To:"
+     ("To:" "Mail-Followup-To:"))
+    (("Followup-To:" "poster")
+     ("To:" "From:"))
+    ("List-Unsubscribe:"
+     ("To:" "Reply-To:" "To:" "Original-To:" "X-To:" "Apparently-To:"
+      "Cc:" "Original-Cc:" "X-Cc:"))
+    ("Mailing-List:"
+     ("To:" "Reply-To:" "To:" "Original-To:" "X-To:" "Apparently-To:"
+      "Cc:" "Original-Cc:" "X-Cc:"))
+    ("Followup-To:"
+     ("Newsgroups:" "Followup-To:"))
+    ("Newsgroups:"
+     ("Newsgroups:" "Newsgroups:"))
+    ("Reply-To:"
+     ("To:" "Reply-To:")
+     ("Cc:"
+      "Cc:" "Original-Cc:" "X-Cc:"
+      "To:" "Original-To:" "X-To:" "Apparently-To:"))
+    (t
+     ("To:" "Mail-Reply-To:" "From:" "Reply-To:")
+     ("Cc:"
+      "Cc:" "Original-Cc:" "X-Cc:"
+      "To:" "Original-To:" "X-To:" "Apparently-To:"))))
+(setq mew-reply-sender-alist
+  '((t
+     ("To:" "Mail-Reply-To:" "From:" "Reply-To:")
+     ("Cc:" "Cc:" "Original-Cc:" "X-Cc:"))))
+(setq mew-reply-fromme-alist
+  '((t
+     ("To:" 
+      "Mail-Followup-To:" "Mail-Reply-To:" "Reply-To:"
+      "To:" "Original-To:" "X-To:" "Apparently-To:")
+     ("Cc:" "Cc:" "Original-Cc:" "X-Cc:")
+     ("Newsgroups:" "Followup-To:" "Newsgroups:"))))
+;;
+;; In Draft mode, you can complete these fields:
+(add-to-list 'mew-fields "In-Reply-To:")
+(add-to-list 'mew-fields "References:")
+(add-to-list 'mew-fields "Mail-Reply-To:")
+(add-to-list 'mew-fields "Mail-Followup-To:")
+(add-to-list 'mew-fields "X-Debbugs-CC:")
+
+;; When replying, select input method according to the character set 
+;; of the message to be replied.
+
+(setq mew-charset-input-method-alist
+      '(("iso-8859-1"  "latin-1-postfix")
+	("iso-8859-2"  "latin-2-postfix")
+	("iso-8859-15" "latin-9-postfix")))
+
+(setq mew-use-header-veil nil)
+
+(setq mew-use-8bit t)
+(setq mew-charset-m17n "utf-8")
+
+(setq mew-header-alist
+      '(("X-Moe:" . "樋口可南子，蒼井優, 寺島しのぶ, 若村麻由美，西田尚美, KiKi，王菲, 章子怡, 中谷美紀, Tora Zial /updated 2009-05-08")
+        ("X-URL:" . "http://www.cis.nagasaki-u.ac.jp/~sonoda/")
+        ("X-PGPKey-Fingerprint:" . "9C5D 3C63 58CD 3886 E357  4058 4647 DD24 8222 B0CE")
+        ("Comments:" . "No Comments")
+        ("X-Mojibake:" "美乳癒理憎増傷増傷口刷込口蹄蛸油")
+        ("Keywords:" . "No Keywords")
+        ;;("Return-Receipt-To:" . "kotaro1976+ReturnReceiptTo@gmail.com")
+        ;;受信確認(MDN)               
+        ;;("Disposition-Notification-To:" . "sonoda-mdn@cis.nagasaki-u.ac.jp")
+        ))
+
+
+(setq mew-prog-pgp "gpg") ;; GnuPGをPGPとして使う
+
+(setq mew-prog-gpg "mew-gpg") ;; GnuPGの宣言
+
+;;(setq mew-prog-pgpkey      "rpk")
+;;(setq mew-prog-pgpkey-args '("--mew"))
+(setq mew-pgp-pks-servers  '(("pgp.nic.ad.jp" t)))
+
+(setq mew-summary-form
+           '(type (5 date) " " (-4 size) " " (14 from) " " t (30 subj) "|" (0 body)))
+
+(setq mew-prog-image/*-ext '("display" ("-resize" "600")))
+
+(setq mew-use-suffix t)
+
+(setq mew-decode-broken t)
+;(setq mew-use-samba-encoding t)
+(setq mew-cs-samba 'shift_jis)
+
+(setq mew-theme-file "~/.mew-theme.el");
+
+(setq mew-field-delete-for-forwarding '(
+"Received:" "Return-Path:" "Received-SPF:" "Authentication-Results:" 
+"Delivered-To:" "Precedence:" "Lines" 
+"Importance:" "Reply-To:" "Mailing-List:" 
+"In-Reply-To:" "Errors-To:" "Sender:" "List-" "X-Original-To:" 
+"X-ASG-"  
+"X-Barracuda-" 
+"X-Spam-JudgedByKotaro1976-" "X-Spam-" "X-Mailer:" "X-Mew:"))
+
+;;;;;;;
+;; submission port
+;;;;;;
+
+;; SMTPポートのみを使用したい場合
+;;(setq mew-smtp-port "smtp") ;; デフォルトのまま
+;;(setq mew-use-submission nil) ;; デフォルトのまま
+
+;; Submissionポートのみを使用したい場合
+;;(setq mew-smtp-port "submission")
+;;(setq mew-use-submission nil) ;; デフォルトのまま
+
+;; Submissionポートから SMTPポートにフォールバックして欲しい場合
+(setq mew-smtp-port "smtp") ;; デフォルトのまま
+(setq mew-use-submission t)
+
+;; submission portを完全使用
+;;(setq mew-smtp-port "submission")
+;;(setq mew-use-submission t)
+
+(setq mew-refile-guess-from-me-is-special nil)
+;(setq mew-mode-line-id `(,(propertized-buffer-identification "Mew: %12b")))
+;(setq mew-use-format-flowed t)
+
+(load-file "/home/kotaro/.mew.coding")
+(load-file "/home/kotaro/.mew.readspam")
+(load-file "/home/kotaro/.mew.org")
+;(load-file "/home/kotaro/.mew.flyspell")
+;(load-file "/home/kotaro/.mew.caesar")
+(load-file "/home/kotaro/.mew.octetstream")
+
+(setq mew-field-database (append '(("X-Spam-Report:" unstruct unstruct)
+                                   ("List-Unsubscribe:" unstruct unstruct)
+                                   ("List-Subscribe:" unstruct unstruct))
+                                 mew-field-database))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Printing Message mode to your PS printer
+;;;
+
+(setq mew-print-function 'ps-print-buffer)
+(setq ps-multibyte-buffer 'non-latin-printer) ;; for Japanese
+(setq ps-print-header nil)
+
+;;;
+;;; End
+;;;
+
+(setq mew-use-cached-passwd t) ;;lpurvuclcuufsyth
+(setq mew-search-method 'est)
+(setq mew-biff t)
+
+; x-face
+(cond
+ ((eq emacs-major-version 21)
+  (setq mew-use-highlight-x-face t
+        mew-use-highlight-x-face-function 'x-face-decode-message-header)
+  (define-key mew-summary-mode-map "\C-cxs" 'x-face-save)
+  (define-key mew-draft-mode-map "\C-cxi" 'x-face-insert)
+  (define-key mew-draft-header-map "\C-cxi" 'x-face-insert)
+  (define-key mew-draft-mode-map "\C-cxs" 'x-face-show)
+  (define-key mew-draft-header-map "\C-cxs" 'x-face-show)
+  ;; Insert default x-face automatically
+  ;;(add-hook 'mew-draft-mode-hook 'x-face-insert)
+  (add-hook 'mew-make-message-hook 'x-face-turn-off)
+  ;; Hit it off with select-xface.
+  (defun mew-x-face-decode-message-header (beg end)
+    (x-face-decode-message-header beg end))
+  (add-hook 'select-xface-insert-hook (function (lambda () (x-face-show 1))))
+  )
+ (t
+  ;; (setq mew-use-highlight-x-face t)
+  ;; (setq mew-use-highlight-x-face-function
+  ;;       'x-face-mule-x-face-decode-message-header)
+  ;; (require 'x-face-mule)
+  ))
+
+(require 'google-contacts-mew)
+(setq google-contacts-email "kotaro1976@gmail.com")
+(setq google-contacts-passwd "lpurvuclcuufsyth")
+
+;; 草稿を作る時(w,f,F)、最初に To: と Cc: を聞かれる。
+(setq mew-ask-do t) 
+;(setq mew-ask-cc t)
+
+;; 草稿を作る時(w,f,F)や、再編集時(E)にケースを自動的に設定する。
+(setq mew-case-guess-alist
+      '(("\\(To\\|Cc\\):"
+         ("sonoda@cis\\.nagasaki-u\\.ac\\.jp" "cis")
+	 ("kotaro@gmail\\.com" "default")
+	 ("kotaro@amu\\.edu\\.pl" "amu")
+	 )))
+;; 返信時(a,A)にケースを自動的に設定する。
+(setq mew-case-guess-when-replied-alist
+      '(("\\(To\\|Cc\\):"
+         ("sonoda@cis\\.nagasaki-u\\.ac\\.jp" "cis")
+	 ("kotaro@gmail\\.com" "default")
+	 ("kotaro@amu\\.edu\\.pl" "amu")
+         )))
+
+(setq mew-refile-ctrl-multi t)
+(setq mew-summary-form-mark-review t)

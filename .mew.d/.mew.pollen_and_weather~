@@ -1,0 +1,6 @@
+(add-hook 'mew-draft-mode-hook
+          '(lambda ()
+             (pollen-insert-header "東京多摩")))
+(add-hook 'mew-draft-mode-hook
+          '(lambda ()
+             (weather-insert-header "東京地方")))

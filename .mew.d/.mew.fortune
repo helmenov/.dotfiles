@@ -1,0 +1,32 @@
+(autoload 'fortune-from-http "fortune" "Fortune" t)
+(autoload 'fortune-insert-header "fortune" "Fortune" t)
+(setq fortune-proxy-server "localhost")
+(setq fortune-proxy-port "8123")
+(add-hook 'mew-draft-mode-hook 'ys:fortune-insert-header)
+(setq fortune-seiza "おうし座")
+(setq ys:fortune-insert-header-list
+      '(
+       (month "/" day "の" seiza "は，" ("総合運" . 3))
+       (month "/" day "の" seiza "の恋愛は，" ("恋愛運" . 1))
+       (month "/" day "の" seiza "の金運は，" ("金運" . 1))
+       (month "/" day "の" seiza "の仕事は，" ("仕事運" . 1))
+       (month "/" day "の" seiza "のラッキーカラーは，" ("カラー") "です．")
+       (month "/" day "の" seiza "のラッキーアイテムは，" ("アイテム") "です．")
+       (month "/" day "の" seiza "のラッキースポットは，" ("スポット") "です．")
+       (month "/" day "の" seiza "のラッキーレジャーは，" ("レジャー") "，です．")
+       (month "/" day "の" seiza "のラッキーアルファベットは，「" ("アルファベット") "」です．")
+       (month "/" day "の" seiza "のラッキーグルメは，" ("グルメ") "です．")
+       (month "/" day "の" seiza "のラッキー方位は，" ("方位") "です．")
+       ))
+
+(defun ys:fortune-insert-header ()
+  "Fortune"
+  (interactive)
+  (require 'fortune)  
+  (setq fortune-format
+        (nth (random (length ys:fortune-insert-header-list))
+             ys:fortune-insert-header-list))
+  (fortune-insert-header
+   (car (nth (random (length fortune-url-alist))
+             fortune-url-alist))))
+
