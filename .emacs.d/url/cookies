@@ -1,0 +1,42 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '(("t.co"
+  [url-cookie "muc" "3544d70f-c879-4097-9b5f-9903fafc7783" "Mon, 20 Mar 2017 10:02:57 GMT" "/" "t.co" nil])
+ (".gyazo.com"
+  [url-cookie "Gyazo_session" "NXFXWExJQXdMN2Fpakd0bGViSXNSbDZic0dwUzBUalRxWS92dGVZYithUHg0angwekQ1MXRyQXE3Q0tmd2Vrei8vWmtWbTZRL3NBOWdDYWdXT2hRTnk2dkNqYUFVTW5zai9NUUlpZ3JLYUp6eDc0YmRRYWlBaHhVanVJY0krU2lqUEhRNjRaRXVWVU5oYnFEZStjZ1ZrSnNaOG52SmhCVHZQVWtWa3AzVmtZYnRTN0lMV3ZmSjQxK2xvVDdEd0x4LS1od3pjMFdySFBhYlM1VWlGWnFxMG93PT0%3D--6ff3445f60aa2de49bd339b252e968af1c2755bb" "Fri, 08 May 2015 07:52:20 -0000" "/" ".gyazo.com" nil])
+ ("blog.livedoor.jp"
+  [url-cookie "ldblog_u" "133.45.130.185.1428237774779333" "04 Jul 15 12:42:54 [GMT]" "/" "blog.livedoor.jp" nil])
+ (".tinyurl.com"
+  [url-cookie "tinyUUID" "51d249a3ccf5852d82b99352" "01-Apr-2016 11:14:30.00 GMT" "/" ".tinyurl.com" nil])
+ ("hatena.ne.jp"
+  [url-cookie "b" "$1$NeHt9Sqw$pwLdkx/ASDDlGZGKsWIYg/" "15-Mar-2035 02:00:56.00 GMT" "/" "hatena.ne.jp" nil])
+ (".bit.ly"
+  [url-cookie "HttpOnly" nil "Wed Sep 16 02:00:49 2015" "/" ".bit.ly" nil]
+  [url-cookie "_bit" "550b7f51-0032e-05b15-411cf10a" "Wed Sep 16 02:00:49 2015" "/" ".bit.ly" nil])
+ (".google.co.jp"
+  [url-cookie "PREF" "ID=3d64bc39e69f216a:FF=0:TM=1427073658:LM=1427073658:S=KkeWc9GDnLJuAMXl" "22-Mar-2017 01:20:58.00 GMT" "/" ".google.co.jp" nil]
+  [url-cookie "NID" "67=IS7YBOjeNRncxS3myOG4yVCedWkV9tKiM1CJjCJJ-Wg1SAcCFbFaXabxPqcicyqt-sWuo0ChAWnPbP6mfcW2yk78p2cQbcNb4V-gfCDDsH32JoWmJGkGlHL7KylvnanA" "22-Sep-2015 01:20:58.00 GMT" "/" ".google.co.jp" nil]
+  [url-cookie "HttpOnly" nil "22-Sep-2015 01:20:58.00 GMT" "/" ".google.co.jp" nil])
+ (".ift.tt"
+  [url-cookie "_bit" "550f6b4c-00016-079ac-281cf10a" "Sat Sep 19 01:24:28 2015" "/" ".ift.tt" nil]
+  [url-cookie "HttpOnly" nil "Thu Apr  9 02:20:12 2015" "/" ".ift.tt" nil]
+  [url-cookie "_cc" "2" "Thu Apr  9 02:20:12 2015" "/" ".ift.tt" nil])
+ ("www.memrise.com"
+  [url-cookie "csrftoken" "wmfIAqFzgSCO4Kaa7Iu3ipdIUiU71Dm3" "01-Apr-2016 06:18:13.00 GMT" "/" "www.memrise.com" nil]
+  [url-cookie "Max-Age" "31449600" "01-Apr-2016 06:18:13.00 GMT" "/" "www.memrise.com" nil])
+ (".twitter.com"
+  [url-cookie "guest_id" "v1%3A142613998349561429" "11-Mar-2017 05:59:43.00 UTC" "/" ".twitter.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '(("accounts.google.com"
+  [url-cookie "HttpOnly" nil "12-Mar-2017 02:44:20.00 GMT" "/" "accounts.google.com" t]
+  [url-cookie "GAPS" "1:dqd-G-6xUx6wTAidyMSEGOJpY02tnw:JXZvBCK_zL0LsVjq" "12-Mar-2017 02:44:20.00 GMT" "/" "accounts.google.com" t]
+  [url-cookie "Priority" "HIGH" "12-Mar-2017 02:44:20.00 GMT" "/" "accounts.google.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

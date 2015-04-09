@@ -6,15 +6,26 @@
 		 '("/usr/local/share/emacs/site-lisp/mew")
 		 '("/usr/local/share/emacs/site-lisp/yatex")
 		 '("/usr/local/share/emacs/site-lisp/w3m")
+		 '("/usr/share/emacs/site-lisp/a2ps")
 		 load-path))
 
 (set-language-environment 'Japanese)
+(prefer-coding-system 'iso-2022-jp)
+(prefer-coding-system 'shift_jis)
 (prefer-coding-system 'utf-8)
-(set-clipboard-coding-system 'utf-8)
+(prefer-coding-system 'euc-jp)
+;;(set-terminal-coding-system 'utf-8)
+;;(setq file-name-coding-system 'utf-8)
+;;(set-clipboard-coding-system 'utf-8)
+(cond ((boundp 'buffer-file-coding-system)
+       (setq buffer-file-coding-system 'utf-8))
+      (t
+       (setq default-buffer-file-coding-system 'utf-8)))
+
+;;(setq coding-system-for-read 'utf-8-unix)
 (set-default-coding-systems 'utf-8)
-(set-file-name-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
+;;(set-keyboard-coding-system 'utf-8)
+;;(set-buffer-file-coding-system 'euc-jp)
 ;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

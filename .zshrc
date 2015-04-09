@@ -177,3 +177,7 @@ case ${OSTYPE} in
 esac
  
 # vim:set ft=zsh:
+
+export TEXMFCNF=$HOME/.texmf-config/web2c:
+export EDITOR='vim'
+#source ~/.bin/tmuxinator.zsh

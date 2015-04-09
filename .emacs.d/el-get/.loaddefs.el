@@ -3,12 +3,11 @@
 ;;; Code:
 
 
-;;;### (autoloads (anything-other-buffer anything-at-point anything)
-;;;;;;  "anything/anything" "anything/anything.el" (21162 36558 0
-;;;;;;  0))
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/anything/anything"
+;;;;;;  "anything/anything.el" "8c7ada170b5ace83d4fbb76e8baaa7b1")
 ;;; Generated autoloads from anything/anything.el
 
-(autoload 'anything "anything/anything" "\
+(autoload 'anything "../../.dotfiles/.emacs.d/el-get/anything/anything" "\
 Main function to execute anything sources.
 
 Keywords supported:
@@ -85,14 +84,14 @@ to 10 as session local variable.
 
 \(fn &rest PLIST)" t nil)
 
-(autoload 'anything-at-point "anything/anything" "\
+(autoload 'anything-at-point "../../.dotfiles/.emacs.d/el-get/anything/anything" "\
 Call anything with symbol at point as initial input.
 ANY-SOURCES ANY-INPUT ANY-PROMPT ANY-RESUME ANY-PRESELECT and ANY-BUFFER
 are same args as in `anything'.
 
 \(fn &optional ANY-SOURCES ANY-INPUT ANY-PROMPT ANY-RESUME ANY-PRESELECT ANY-BUFFER)" t nil)
 
-(autoload 'anything-other-buffer "anything/anything" "\
+(autoload 'anything-other-buffer "../../.dotfiles/.emacs.d/el-get/anything/anything" "\
 Simplified interface of `anything' with other `anything-buffer'.
 Call `anything' with only ANY-SOURCES and ANY-BUFFER as args.
 
@@ -100,327 +99,271 @@ Call `anything' with only ANY-SOURCES and ANY-BUFFER as args.
 
 ;;;***
 
-;;;### (autoloads (anything-ctags-current-file anything-xrandr-set
-;;;;;;  anything-c-apropos anything-ucs anything-ratpoison-commands
-;;;;;;  anything-c-run-external-command anything-eshell-history anything-esh-pcomplete
-;;;;;;  anything-apt anything-world-time anything-select-xfont anything-top
-;;;;;;  anything-create anything-execute-anything-command anything-call-source
-;;;;;;  anything-surfraw anything-calcul-expression anything-eval-expression-with-eldoc
-;;;;;;  anything-eval-expression anything-yaoddmuse-emacswiki-post-library
-;;;;;;  anything-yaoddmuse-emacswiki-edit-or-view anything-all-mark-rings
-;;;;;;  anything-global-mark-ring anything-mark-ring anything-simple-call-tree
-;;;;;;  anything-bookmark-ext anything-manage-advice anything-M-x
-;;;;;;  anything-filelist+ anything-filelist anything-c-etags-select
-;;;;;;  anything-do-pdfgrep anything-do-zgrep anything-do-grep anything-dired-hardlink-file
-;;;;;;  anything-dired-symlink-file anything-dired-copy-file anything-dired-rename-file
-;;;;;;  anything-insert-file anything-write-file anything-find-files
-;;;;;;  anything-c-copy-files-async anything-regexp anything-org-headlines
-;;;;;;  anything-browse-code anything-occur anything-list-emacs-process
-;;;;;;  anything-timers anything-bm-list anything-eev-anchors anything-emms
-;;;;;;  anything-org-keywords anything-man-woman anything-register
-;;;;;;  anything-c-insert-latex-math anything-c-pp-bookmarks anything-bookmarks
-;;;;;;  anything-colors anything-firefox-bookmarks anything-w3m-bookmarks
-;;;;;;  anything-locate anything-bbdb anything-buffers-list anything-for-buffers
-;;;;;;  anything-yahoo-suggest anything-google-suggest anything-imenu
-;;;;;;  anything-gentoo anything-minibuffer-history anything-show-kill-ring
-;;;;;;  anything-info-at-point anything-recentf anything-for-files
-;;;;;;  anything-mini anything-c-reset-adaptative-history anything-c-set-variable
-;;;;;;  anything-c-call-interactively anything-w32-shell-execute-open-file
-;;;;;;  anything-lisp-completion-or-file-name-at-point anything-lisp-completion-at-point-or-indent
-;;;;;;  anything-c-complete-file-name-at-point anything-lisp-completion-at-point
-;;;;;;  anything-completion-mode anything-yaoddmuse-cache-pages anything-c-bmkext-run-edit
-;;;;;;  anything-c-bookmark-run-delete anything-c-bookmark-run-jump-other-window
-;;;;;;  anything-yank-text-at-point anything-c-grep-run-save-buffer
-;;;;;;  anything-c-grep-run-other-window-action anything-c-grep-run-default-action
-;;;;;;  anything-c-grep-run-persistent-action anything-c-goto-next-file
-;;;;;;  anything-c-goto-precedent-file anything-dired-mode anything-ff-run-kill-buffer-persistent
-;;;;;;  anything-ff-persistent-delete anything-ff-properties-persistent
-;;;;;;  anything-ff-run-print-file anything-ff-run-etags anything-ff-run-gnus-attach-files
-;;;;;;  anything-ff-run-locate anything-ff-run-open-file-externally
-;;;;;;  anything-ff-run-switch-other-frame anything-ff-run-switch-other-window
-;;;;;;  anything-ff-run-switch-to-eshell anything-ff-run-complete-fn-at-point
-;;;;;;  anything-ff-run-delete-file anything-ff-run-hardlink-file
-;;;;;;  anything-ff-run-symlink-file anything-ff-run-ediff-merge-file
-;;;;;;  anything-ff-run-ediff-file anything-ff-run-eshell-command-on-file
-;;;;;;  anything-ff-run-load-file anything-ff-run-byte-compile-file
-;;;;;;  anything-ff-run-rename-file anything-ff-run-copy-file anything-ff-run-zgrep
-;;;;;;  anything-ff-run-pdfgrep anything-ff-run-grep anything-ff-run-switch-to-history
-;;;;;;  anything-ff-run-toggle-auto-update anything-buffer-run-ediff
-;;;;;;  anything-buffer-switch-to-elscreen anything-buffer-switch-other-frame
-;;;;;;  anything-buffer-switch-other-window anything-buffer-run-query-replace
-;;;;;;  anything-buffer-run-query-replace-regexp anything-buffer-run-zgrep
-;;;;;;  anything-buffer-run-grep anything-buffer-run-kill-buffers
-;;;;;;  anything-buffer-save-persistent anything-buffer-revert-persistent
-;;;;;;  anything-buffer-diff-persistent anything-toggle-all-marks
-;;;;;;  anything-unmark-all anything-mark-all anything-insert-buffer-name
-;;;;;;  anything-test-sources anything-etags-help anything-pdfgrep-help
-;;;;;;  anything-grep-help anything-generic-file-help anything-read-file-name-help
-;;;;;;  anything-ff-help anything-c-buffer-help anything-configuration)
-;;;;;;  "anything/anything-config" "anything/anything-config.el"
-;;;;;;  (21162 36558 0 0))
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/anything/anything-config"
+;;;;;;  "anything/anything-config.el" "80d02b9bc86a1e9344308f1d8d916018")
 ;;; Generated autoloads from anything/anything-config.el
 
-(autoload 'anything-configuration "anything/anything-config" "\
+(autoload 'anything-configuration "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Customize `anything'.
 
 \(fn)" t nil)
 
 (defvar anything-command-map)
 
-(autoload 'anything-c-buffer-help "anything/anything-config" "\
+(autoload 'anything-c-buffer-help "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Help command for anything buffers.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-help "anything/anything-config" "\
+(autoload 'anything-ff-help "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Help command for `anything-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-read-file-name-help "anything/anything-config" "\
+(autoload 'anything-read-file-name-help "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 
 
 \(fn)" t nil)
 
-(autoload 'anything-generic-file-help "anything/anything-config" "\
+(autoload 'anything-generic-file-help "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 
 
 \(fn)" t nil)
 
-(autoload 'anything-grep-help "anything/anything-config" "\
+(autoload 'anything-grep-help "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 
 
 \(fn)" t nil)
 
-(autoload 'anything-pdfgrep-help "anything/anything-config" "\
+(autoload 'anything-pdfgrep-help "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 
 
 \(fn)" t nil)
 
-(autoload 'anything-etags-help "anything/anything-config" "\
+(autoload 'anything-etags-help "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 The help function for etags.
 
 \(fn)" t nil)
 
-(autoload 'anything-test-sources "anything/anything-config" "\
+(autoload 'anything-test-sources "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 List all anything sources for test.
 The output is sexps which are evaluated by \\[eval-last-sexp].
 
 \(fn)" t nil)
 
-(autoload 'anything-insert-buffer-name "anything/anything-config" "\
+(autoload 'anything-insert-buffer-name "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Insert buffer name.
 
 \(fn)" t nil)
 
-(autoload 'anything-mark-all "anything/anything-config" "\
+(autoload 'anything-mark-all "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Mark all visible unmarked candidates in current source.
 
 \(fn)" t nil)
 
-(autoload 'anything-unmark-all "anything/anything-config" "\
+(autoload 'anything-unmark-all "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Unmark all candidates in all sources of current anything session.
 
 \(fn)" t nil)
 
-(autoload 'anything-toggle-all-marks "anything/anything-config" "\
+(autoload 'anything-toggle-all-marks "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Toggle all marks.
 Mark all visible candidates of current source or unmark all candidates
 visible or invisible in all sources of current anything session
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-diff-persistent "anything/anything-config" "\
+(autoload 'anything-buffer-diff-persistent "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Toggle diff buffer without quitting anything.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-revert-persistent "anything/anything-config" "\
+(autoload 'anything-buffer-revert-persistent "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Revert buffer without quitting anything.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-save-persistent "anything/anything-config" "\
+(autoload 'anything-buffer-save-persistent "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Save buffer without quitting anything.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-run-kill-buffers "anything/anything-config" "\
+(autoload 'anything-buffer-run-kill-buffers "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run kill buffer action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-run-grep "anything/anything-config" "\
+(autoload 'anything-buffer-run-grep "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Grep action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-run-zgrep "anything/anything-config" "\
+(autoload 'anything-buffer-run-zgrep "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Grep action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-run-query-replace-regexp "anything/anything-config" "\
+(autoload 'anything-buffer-run-query-replace-regexp "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Query replace regexp action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-run-query-replace "anything/anything-config" "\
+(autoload 'anything-buffer-run-query-replace "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Query replace action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-switch-other-window "anything/anything-config" "\
+(autoload 'anything-buffer-switch-other-window "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run switch to other window action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-switch-other-frame "anything/anything-config" "\
+(autoload 'anything-buffer-switch-other-frame "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run switch to other frame action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-switch-to-elscreen "anything/anything-config" "\
+(autoload 'anything-buffer-switch-to-elscreen "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run switch to elscreen  action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffer-run-ediff "anything/anything-config" "\
+(autoload 'anything-buffer-run-ediff "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run ediff action from `anything-c-source-buffers-list'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-toggle-auto-update "anything/anything-config" "\
+(autoload 'anything-ff-run-toggle-auto-update "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-switch-to-history "anything/anything-config" "\
+(autoload 'anything-ff-run-switch-to-history "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Switch to history action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-grep "anything/anything-config" "\
+(autoload 'anything-ff-run-grep "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Grep action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-pdfgrep "anything/anything-config" "\
+(autoload 'anything-ff-run-pdfgrep "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Pdfgrep action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-zgrep "anything/anything-config" "\
+(autoload 'anything-ff-run-zgrep "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Grep action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-copy-file "anything/anything-config" "\
+(autoload 'anything-ff-run-copy-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Copy file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-rename-file "anything/anything-config" "\
+(autoload 'anything-ff-run-rename-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Rename file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-byte-compile-file "anything/anything-config" "\
+(autoload 'anything-ff-run-byte-compile-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Byte compile file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-load-file "anything/anything-config" "\
+(autoload 'anything-ff-run-load-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Load file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-eshell-command-on-file "anything/anything-config" "\
+(autoload 'anything-ff-run-eshell-command-on-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run eshell command on file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-ediff-file "anything/anything-config" "\
+(autoload 'anything-ff-run-ediff-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Ediff file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-ediff-merge-file "anything/anything-config" "\
+(autoload 'anything-ff-run-ediff-merge-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Ediff merge file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-symlink-file "anything/anything-config" "\
+(autoload 'anything-ff-run-symlink-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Symlink file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-hardlink-file "anything/anything-config" "\
+(autoload 'anything-ff-run-hardlink-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Hardlink file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-delete-file "anything/anything-config" "\
+(autoload 'anything-ff-run-delete-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Delete file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-complete-fn-at-point "anything/anything-config" "\
+(autoload 'anything-ff-run-complete-fn-at-point "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run complete file name action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-switch-to-eshell "anything/anything-config" "\
+(autoload 'anything-ff-run-switch-to-eshell "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run switch to eshell action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-switch-other-window "anything/anything-config" "\
+(autoload 'anything-ff-run-switch-other-window "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run switch to other window action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-switch-other-frame "anything/anything-config" "\
+(autoload 'anything-ff-run-switch-other-frame "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run switch to other frame action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-open-file-externally "anything/anything-config" "\
+(autoload 'anything-ff-run-open-file-externally "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run open file externally command action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-locate "anything/anything-config" "\
+(autoload 'anything-ff-run-locate "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run locate action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-gnus-attach-files "anything/anything-config" "\
+(autoload 'anything-ff-run-gnus-attach-files "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run gnus attach files command action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-etags "anything/anything-config" "\
+(autoload 'anything-ff-run-etags "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Etags command action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-print-file "anything/anything-config" "\
+(autoload 'anything-ff-run-print-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run Print file action from `anything-c-source-find-files'.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-properties-persistent "anything/anything-config" "\
+(autoload 'anything-ff-properties-persistent "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Show properties without quitting anything.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-persistent-delete "anything/anything-config" "\
+(autoload 'anything-ff-persistent-delete "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Delete current candidate without quitting.
 
 \(fn)" t nil)
 
-(autoload 'anything-ff-run-kill-buffer-persistent "anything/anything-config" "\
+(autoload 'anything-ff-run-kill-buffer-persistent "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Execute `anything-ff-kill-buffer-fname' whitout quitting.
 
 \(fn)" t nil)
@@ -432,9 +375,9 @@ Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `anything-dired-mode'.")
 
-(custom-autoload 'anything-dired-mode "anything/anything-config" nil)
+(custom-autoload 'anything-dired-mode "../../.dotfiles/.emacs.d/el-get/anything/anything-config" nil)
 
-(autoload 'anything-dired-mode "anything/anything-config" "\
+(autoload 'anything-dired-mode "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Toggle Anything-Dired mode on or off.
 With a prefix argument ARG, enable Anything-Dired mode if ARG is
 positive, and disable it otherwise.  If called from Lisp, enable
@@ -443,57 +386,57 @@ the mode if ARG is omitted or nil, and toggle it if ARG is `toggle'.
 
 \(fn &optional ARG)" t nil)
 
-(autoload 'anything-c-goto-precedent-file "anything/anything-config" "\
+(autoload 'anything-c-goto-precedent-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Go to precedent file in anything grep/etags buffers.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-goto-next-file "anything/anything-config" "\
+(autoload 'anything-c-goto-next-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Go to precedent file in anything grep/etags buffers.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-grep-run-persistent-action "anything/anything-config" "\
+(autoload 'anything-c-grep-run-persistent-action "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run grep persistent action from `anything-do-grep-1'.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-grep-run-default-action "anything/anything-config" "\
+(autoload 'anything-c-grep-run-default-action "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run grep default action from `anything-do-grep-1'.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-grep-run-other-window-action "anything/anything-config" "\
+(autoload 'anything-c-grep-run-other-window-action "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run grep goto other window action from `anything-do-grep-1'.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-grep-run-save-buffer "anything/anything-config" "\
+(autoload 'anything-c-grep-run-save-buffer "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run grep save results action from `anything-do-grep-1'.
 
 \(fn)" t nil)
 
-(autoload 'anything-yank-text-at-point "anything/anything-config" "\
+(autoload 'anything-yank-text-at-point "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Yank text at point in minibuffer.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-bookmark-run-jump-other-window "anything/anything-config" "\
+(autoload 'anything-c-bookmark-run-jump-other-window "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Jump to bookmark from keyboard.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-bookmark-run-delete "anything/anything-config" "\
+(autoload 'anything-c-bookmark-run-delete "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Delete bookmark from keyboard.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-bmkext-run-edit "anything/anything-config" "\
+(autoload 'anything-c-bmkext-run-edit "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Run `bmkext-edit-bookmark' from keyboard.
 
 \(fn)" t nil)
 
-(autoload 'anything-yaoddmuse-cache-pages "anything/anything-config" "\
+(autoload 'anything-yaoddmuse-cache-pages "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Fetch the list of files on emacswiki and create cache file.
 If load is non--nil load the file and feed `yaoddmuse-pages-hash'.
 
@@ -506,9 +449,9 @@ Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `anything-completion-mode'.")
 
-(custom-autoload 'anything-completion-mode "anything/anything-config" nil)
+(custom-autoload 'anything-completion-mode "../../.dotfiles/.emacs.d/el-get/anything/anything-config" nil)
 
-(autoload 'anything-completion-mode "anything/anything-config" "\
+(autoload 'anything-completion-mode "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Toggle generic anything completion.
 
 All functions in Emacs that use `completing-read'
@@ -530,17 +473,17 @@ Note: This mode will work only partially on Emacs23.
 
 \(fn &optional ARG)" t nil)
 
-(autoload 'anything-lisp-completion-at-point "anything/anything-config" "\
+(autoload 'anything-lisp-completion-at-point "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Anything lisp symbol completion at point.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-complete-file-name-at-point "anything/anything-config" "\
+(autoload 'anything-c-complete-file-name-at-point "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Complete file name at point.
 
 \(fn)" t nil)
 
-(autoload 'anything-lisp-completion-at-point-or-indent "anything/anything-config" "\
+(autoload 'anything-lisp-completion-at-point-or-indent "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 First call indent and second call complete lisp symbol.
 The second call should happen before `anything-lisp-completion-or-indent-delay',
 after this delay, next call will indent again.
@@ -550,59 +493,59 @@ One hit indent, two quick hits maybe indent and complete.
 
 \(fn ARG)" t nil)
 
-(autoload 'anything-lisp-completion-or-file-name-at-point "anything/anything-config" "\
+(autoload 'anything-lisp-completion-or-file-name-at-point "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Complete lisp symbol or filename at point.
 Filename completion happen if filename is started in
 or between double quotes.
 
 \(fn)" t nil)
 
-(autoload 'anything-w32-shell-execute-open-file "anything/anything-config" "\
+(autoload 'anything-w32-shell-execute-open-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 
 
 \(fn FILE)" t nil)
 
-(autoload 'anything-c-call-interactively "anything/anything-config" "\
+(autoload 'anything-c-call-interactively "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Execute CMD-OR-NAME as Emacs command.
 It is added to `extended-command-history'.
 `anything-current-prefix-arg' is used as the command's prefix argument.
 
 \(fn CMD-OR-NAME)" nil nil)
 
-(autoload 'anything-c-set-variable "anything/anything-config" "\
+(autoload 'anything-c-set-variable "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Set value to VAR interactively.
 
 \(fn VAR)" t nil)
 
-(autoload 'anything-c-reset-adaptative-history "anything/anything-config" "\
+(autoload 'anything-c-reset-adaptative-history "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Delete all `anything-c-adaptive-history' and his file.
 Useful when you have a old or corrupted `anything-c-adaptive-history-file'.
 
 \(fn)" t nil)
 
-(autoload 'anything-mini "anything/anything-config" "\
+(autoload 'anything-mini "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' lightweight version (buffer -> recentf).
 
 \(fn)" t nil)
 
-(autoload 'anything-for-files "anything/anything-config" "\
+(autoload 'anything-for-files "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for opening files.
 ffap -> recentf -> buffer -> bookmark -> file-cache -> files-in-current-dir -> locate.
 
 \(fn)" t nil)
 
-(autoload 'anything-recentf "anything/anything-config" "\
+(autoload 'anything-recentf "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for `recentf'.
 
 \(fn)" t nil)
 
-(autoload 'anything-info-at-point "anything/anything-config" "\
+(autoload 'anything-info-at-point "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for searching info at point.
 With a prefix-arg insert symbol at point.
 
 \(fn ARG)" t nil)
 
-(autoload 'anything-show-kill-ring "anything/anything-config" "\
+(autoload 'anything-show-kill-ring "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for `kill-ring'.
 It is drop-in replacement of `yank-pop'.
 You may bind this command to M-y.
@@ -610,43 +553,43 @@ First call open the kill-ring browser, next calls move to next line.
 
 \(fn)" t nil)
 
-(autoload 'anything-minibuffer-history "anything/anything-config" "\
+(autoload 'anything-minibuffer-history "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for `minibuffer-history'.
 
 \(fn)" t nil)
 
-(autoload 'anything-gentoo "anything/anything-config" "\
+(autoload 'anything-gentoo "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for gentoo linux.
 
 \(fn)" t nil)
 
-(autoload 'anything-imenu "anything/anything-config" "\
+(autoload 'anything-imenu "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for `imenu'.
 
 \(fn)" t nil)
 
-(autoload 'anything-google-suggest "anything/anything-config" "\
+(autoload 'anything-google-suggest "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for google search with google suggest.
 
 \(fn)" t nil)
 
-(autoload 'anything-yahoo-suggest "anything/anything-config" "\
+(autoload 'anything-yahoo-suggest "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for Yahoo searching with Yahoo suggest.
 
 \(fn)" t nil)
 
-(autoload 'anything-for-buffers "anything/anything-config" "\
+(autoload 'anything-for-buffers "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for buffers.
 
 \(fn)" t nil)
 
-(autoload 'anything-buffers-list "anything/anything-config" "\
+(autoload 'anything-buffers-list "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to list buffers.
 It is an enhanced version of `anything-for-buffers'.
 
 \(fn)" t nil)
 
-(autoload 'anything-bbdb "anything/anything-config" "\
+(autoload 'anything-bbdb "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for BBDB.
 
 Needs BBDB.
@@ -655,7 +598,7 @@ http://bbdb.sourceforge.net/
 
 \(fn)" t nil)
 
-(autoload 'anything-locate "anything/anything-config" "\
+(autoload 'anything-locate "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for Locate.
 Note: you can add locate options after entering pattern.
 See 'man locate' for valid options.
@@ -671,7 +614,7 @@ Where db_path is a filename matched by
 
 \(fn ARG)" t nil)
 
-(autoload 'anything-w3m-bookmarks "anything/anything-config" "\
+(autoload 'anything-w3m-bookmarks "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for w3m bookmark.
 
 Needs w3m and emacs-w3m.
@@ -681,7 +624,7 @@ http://emacs-w3m.namazu.org/
 
 \(fn)" t nil)
 
-(autoload 'anything-firefox-bookmarks "anything/anything-config" "\
+(autoload 'anything-firefox-bookmarks "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for firefox bookmark.
 You will have to enable html bookmarks in firefox:
 open about:config in firefox and double click on this line to enable value to true:
@@ -696,52 +639,52 @@ After closing firefox, you will be able to browse you bookmarks.
 
 \(fn)" t nil)
 
-(autoload 'anything-colors "anything/anything-config" "\
+(autoload 'anything-colors "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for color.
 
 \(fn)" t nil)
 
-(autoload 'anything-bookmarks "anything/anything-config" "\
+(autoload 'anything-bookmarks "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for bookmarks.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-pp-bookmarks "anything/anything-config" "\
+(autoload 'anything-c-pp-bookmarks "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for bookmarks (pretty-printed).
 
 \(fn)" t nil)
 
-(autoload 'anything-c-insert-latex-math "anything/anything-config" "\
+(autoload 'anything-c-insert-latex-math "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for latex math symbols completion.
 
 \(fn)" t nil)
 
-(autoload 'anything-register "anything/anything-config" "\
+(autoload 'anything-register "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for Emacs registers.
 
 \(fn)" t nil)
 
-(autoload 'anything-man-woman "anything/anything-config" "\
+(autoload 'anything-man-woman "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for Man and Woman pages.
 
 \(fn)" t nil)
 
-(autoload 'anything-org-keywords "anything/anything-config" "\
+(autoload 'anything-org-keywords "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for org keywords.
 
 \(fn)" t nil)
 
-(autoload 'anything-emms "anything/anything-config" "\
+(autoload 'anything-emms "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for emms sources.
 
 \(fn)" t nil)
 
-(autoload 'anything-eev-anchors "anything/anything-config" "\
+(autoload 'anything-eev-anchors "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for eev anchors.
 
 \(fn)" t nil)
 
-(autoload 'anything-bm-list "anything/anything-config" "\
+(autoload 'anything-bm-list "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for visible bookmarks.
 
 Needs bm.el
@@ -750,45 +693,45 @@ http://cvs.savannah.gnu.org/viewvc/*checkout*/bm/bm/bm.el
 
 \(fn)" t nil)
 
-(autoload 'anything-timers "anything/anything-config" "\
+(autoload 'anything-timers "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for timers.
 
 \(fn)" t nil)
 
-(autoload 'anything-list-emacs-process "anything/anything-config" "\
+(autoload 'anything-list-emacs-process "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for emacs process.
 
 \(fn)" t nil)
 
-(autoload 'anything-occur "anything/anything-config" "\
+(autoload 'anything-occur "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured Anything for Occur source.
 If region is active, search only in region,
 otherwise search in whole buffer.
 
 \(fn)" t nil)
 
-(autoload 'anything-browse-code "anything/anything-config" "\
+(autoload 'anything-browse-code "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything to browse code.
 
 \(fn)" t nil)
 
-(autoload 'anything-org-headlines "anything/anything-config" "\
+(autoload 'anything-org-headlines "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything to show org headlines.
 
 \(fn)" t nil)
 
-(autoload 'anything-regexp "anything/anything-config" "\
+(autoload 'anything-regexp "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything to build regexps.
 `query-replace-regexp' can be run from there against found regexp.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-copy-files-async "anything/anything-config" "\
+(autoload 'anything-c-copy-files-async "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything to copy file list FLIST to DEST asynchronously.
 
 \(fn)" t nil)
 
-(autoload 'anything-find-files "anything/anything-config" "\
+(autoload 'anything-find-files "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for anything implementation of `find-file'.
 Called with a prefix arg show history if some.
 Don't call it from programs, use `anything-find-files-1' instead.
@@ -796,37 +739,37 @@ This is the starting point for nearly all actions you can do on files.
 
 \(fn ARG)" t nil)
 
-(autoload 'anything-write-file "anything/anything-config" "\
+(autoload 'anything-write-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' providing completion for `write-file'.
 
 \(fn)" t nil)
 
-(autoload 'anything-insert-file "anything/anything-config" "\
+(autoload 'anything-insert-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' providing completion for `insert-file'.
 
 \(fn)" t nil)
 
-(autoload 'anything-dired-rename-file "anything/anything-config" "\
+(autoload 'anything-dired-rename-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to rename files from dired.
 
 \(fn)" t nil)
 
-(autoload 'anything-dired-copy-file "anything/anything-config" "\
+(autoload 'anything-dired-copy-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to copy files from dired.
 
 \(fn)" t nil)
 
-(autoload 'anything-dired-symlink-file "anything/anything-config" "\
+(autoload 'anything-dired-symlink-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to symlink files from dired.
 
 \(fn)" t nil)
 
-(autoload 'anything-dired-hardlink-file "anything/anything-config" "\
+(autoload 'anything-dired-hardlink-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to hardlink files from dired.
 
 \(fn)" t nil)
 
-(autoload 'anything-do-grep "anything/anything-config" "\
+(autoload 'anything-do-grep "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for grep.
 Contrarily to Emacs `grep' no default directory is given, but
 the full path of candidates in ONLY.
@@ -840,17 +783,17 @@ See also `anything-do-grep-1'.
 
 \(fn)" t nil)
 
-(autoload 'anything-do-zgrep "anything/anything-config" "\
+(autoload 'anything-do-zgrep "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for zgrep.
 
 \(fn)" t nil)
 
-(autoload 'anything-do-pdfgrep "anything/anything-config" "\
+(autoload 'anything-do-pdfgrep "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for pdfgrep.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-etags-select "anything/anything-config" "\
+(autoload 'anything-c-etags-select "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for etags.
 Called with one prefix arg use symbol at point as initial input.
 Called with two prefix arg reinitialize cache.
@@ -858,14 +801,14 @@ If tag file have been modified reinitialize cache.
 
 \(fn ARG)" t nil)
 
-(autoload 'anything-filelist "anything/anything-config" "\
+(autoload 'anything-filelist "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to open files instantly.
 
 See `anything-c-filelist-file-name' docstring for usage.
 
 \(fn)" t nil)
 
-(autoload 'anything-filelist+ "anything/anything-config" "\
+(autoload 'anything-filelist+ "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to open files/buffers/bookmarks instantly.
 
 This is a replacement for `anything-for-files'.
@@ -873,18 +816,18 @@ See `anything-c-filelist-file-name' docstring for usage.
 
 \(fn)" t nil)
 
-(autoload 'anything-M-x "anything/anything-config" "\
+(autoload 'anything-M-x "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for Emacs commands.
 It is `anything' replacement of regular `M-x' `execute-extended-command'.
 
 \(fn)" t nil)
 
-(autoload 'anything-manage-advice "anything/anything-config" "\
+(autoload 'anything-manage-advice "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to disable/enable function advices.
 
 \(fn)" t nil)
 
-(autoload 'anything-bookmark-ext "anything/anything-config" "\
+(autoload 'anything-bookmark-ext "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for bookmark-extensions sources.
 Needs bookmark-ext.el:
 <http://mercurial.intuxication.org/hg/emacs-bookmark-extension>.
@@ -892,7 +835,7 @@ Contain also `anything-c-source-google-suggest'.
 
 \(fn)" t nil)
 
-(autoload 'anything-simple-call-tree "anything/anything-config" "\
+(autoload 'anything-simple-call-tree "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for simple-call-tree. List function relationships.
 
 Needs simple-call-tree.el.
@@ -900,22 +843,22 @@ http://www.emacswiki.org/cgi-bin/wiki/download/simple-call-tree.el
 
 \(fn)" t nil)
 
-(autoload 'anything-mark-ring "anything/anything-config" "\
+(autoload 'anything-mark-ring "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for `anything-c-source-mark-ring'.
 
 \(fn)" t nil)
 
-(autoload 'anything-global-mark-ring "anything/anything-config" "\
+(autoload 'anything-global-mark-ring "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for `anything-c-source-global-mark-ring'.
 
 \(fn)" t nil)
 
-(autoload 'anything-all-mark-rings "anything/anything-config" "\
+(autoload 'anything-all-mark-rings "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for `anything-c-source-global-mark-ring' and `anything-c-source-mark-ring'.
 
 \(fn)" t nil)
 
-(autoload 'anything-yaoddmuse-emacswiki-edit-or-view "anything/anything-config" "\
+(autoload 'anything-yaoddmuse-emacswiki-edit-or-view "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to edit or view EmacsWiki page.
 
 Needs yaoddmuse.el.
@@ -924,7 +867,7 @@ http://www.emacswiki.org/emacs/download/yaoddmuse.el
 
 \(fn)" t nil)
 
-(autoload 'anything-yaoddmuse-emacswiki-post-library "anything/anything-config" "\
+(autoload 'anything-yaoddmuse-emacswiki-post-library "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to post library to EmacsWiki.
 
 Needs yaoddmuse.el.
@@ -933,74 +876,74 @@ http://www.emacswiki.org/emacs/download/yaoddmuse.el
 
 \(fn)" t nil)
 
-(autoload 'anything-eval-expression "anything/anything-config" "\
+(autoload 'anything-eval-expression "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for `anything-c-source-evaluation-result'.
 
 \(fn ARG)" t nil)
 
-(autoload 'anything-eval-expression-with-eldoc "anything/anything-config" "\
+(autoload 'anything-eval-expression-with-eldoc "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for `anything-c-source-evaluation-result' with `eldoc' support. 
 
 \(fn)" t nil)
 
-(autoload 'anything-calcul-expression "anything/anything-config" "\
+(autoload 'anything-calcul-expression "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for `anything-c-source-calculation-result'.
 
 \(fn)" t nil)
 
-(autoload 'anything-surfraw "anything/anything-config" "\
+(autoload 'anything-surfraw "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to search PATTERN with search ENGINE.
 
 \(fn PATTERN ENGINE)" t nil)
 
-(autoload 'anything-call-source "anything/anything-config" "\
+(autoload 'anything-call-source "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to call anything source.
 
 \(fn)" t nil)
 
-(autoload 'anything-execute-anything-command "anything/anything-config" "\
+(autoload 'anything-execute-anything-command "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to execute preconfigured `anything'.
 
 \(fn)" t nil)
 
-(autoload 'anything-create "anything/anything-config" "\
+(autoload 'anything-create "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to do many create actions from STRING.
 See also `anything-create--actions'.
 
 \(fn &optional STRING INITIAL-INPUT)" t nil)
 
-(autoload 'anything-top "anything/anything-config" "\
+(autoload 'anything-top "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' for top command.
 
 \(fn)" t nil)
 
-(autoload 'anything-select-xfont "anything/anything-config" "\
+(autoload 'anything-select-xfont "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to select Xfont.
 
 \(fn)" t nil)
 
-(autoload 'anything-world-time "anything/anything-config" "\
+(autoload 'anything-world-time "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to show world time.
 
 \(fn)" t nil)
 
-(autoload 'anything-apt "anything/anything-config" "\
+(autoload 'anything-apt "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' : frontend of APT package manager.
 With a prefix arg reload cache.
 
 \(fn ARG)" t nil)
 
-(autoload 'anything-esh-pcomplete "anything/anything-config" "\
+(autoload 'anything-esh-pcomplete "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything to provide anything completion in eshell.
 
 \(fn)" t nil)
 
-(autoload 'anything-eshell-history "anything/anything-config" "\
+(autoload 'anything-eshell-history "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for eshell history.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-run-external-command "anything/anything-config" "\
+(autoload 'anything-c-run-external-command "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to run External PROGRAM asyncronously from Emacs.
 If program is already running exit with error.
 You can set your own list of commands with
@@ -1008,27 +951,27 @@ You can set your own list of commands with
 
 \(fn PROGRAM)" t nil)
 
-(autoload 'anything-ratpoison-commands "anything/anything-config" "\
+(autoload 'anything-ratpoison-commands "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to execute ratpoison commands.
 
 \(fn)" t nil)
 
-(autoload 'anything-ucs "anything/anything-config" "\
+(autoload 'anything-ucs "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything for `ucs-names' math symbols.
 
 \(fn)" t nil)
 
-(autoload 'anything-c-apropos "anything/anything-config" "\
+(autoload 'anything-c-apropos "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured anything to describe commands, functions, variables and faces.
 
 \(fn)" t nil)
 
-(autoload 'anything-xrandr-set "anything/anything-config" "\
+(autoload 'anything-xrandr-set "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 
 
 \(fn)" t nil)
 
-(autoload 'anything-ctags-current-file "anything/anything-config" "\
+(autoload 'anything-ctags-current-file "../../.dotfiles/.emacs.d/el-get/anything/anything-config" "\
 Preconfigured `anything' to list function/variable definitions.
 
 Needs Exuberant Ctags.
@@ -1039,11 +982,11 @@ http://ctags.sourceforge.net/
 
 ;;;***
 
-;;;### (autoloads (anything-mp-toggle-match-plugin) "anything/anything-match-plugin"
-;;;;;;  "anything/anything-match-plugin.el" (21162 36559 0 0))
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/anything/anything-match-plugin"
+;;;;;;  "anything/anything-match-plugin.el" "7ba84ffc5269f719822c4db3f7681a71")
 ;;; Generated autoloads from anything/anything-match-plugin.el
 
-(autoload 'anything-mp-toggle-match-plugin "anything/anything-match-plugin" "\
+(autoload 'anything-mp-toggle-match-plugin "../../.dotfiles/.emacs.d/el-get/anything/anything-match-plugin" "\
 Turn on/off multiple regexp matching in anything.
 i.e anything-match-plugin.
 
@@ -1051,10 +994,188 @@ i.e anything-match-plugin.
 
 ;;;***
 
-;;;### (autoloads (el-get-checksum el-get-make-recipes el-get-cd
-;;;;;;  el-get-self-update el-get-update-all el-get-version) "el-get/el-get"
-;;;;;;  "el-get/el-get.el" (21162 36554 0 0))
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/el-get/el-get"
+;;;;;;  "el-get/el-get.el" "0365c8b39ba4508971d8f28aa88b64f9")
 ;;; Generated autoloads from el-get/el-get.el
+
+(autoload 'el-get-version "../../.dotfiles/.emacs.d/el-get/el-get/el-get" "\
+Message the current el-get version
+
+\(fn)" t nil)
+
+(autoload 'el-get-update-all "../../.dotfiles/.emacs.d/el-get/el-get/el-get" "\
+Performs update of all installed packages.
+
+\(fn &optional NO-PROMPT)" t nil)
+
+(autoload 'el-get-self-update "../../.dotfiles/.emacs.d/el-get/el-get/el-get" "\
+Update el-get itself.  The standard recipe takes care of reloading the code.
+
+\(fn)" t nil)
+
+(autoload 'el-get-cd "../../.dotfiles/.emacs.d/el-get/el-get/el-get" "\
+Open dired in the package directory.
+
+\(fn PACKAGE)" t nil)
+
+(autoload 'el-get-make-recipes "../../.dotfiles/.emacs.d/el-get/el-get/el-get" "\
+Loop over `el-get-sources' and write a recipe file for each
+entry which is not a symbol and is not already a known recipe.
+
+\(fn &optional DIR)" t nil)
+
+(autoload 'el-get-checksum "../../.dotfiles/.emacs.d/el-get/el-get/el-get" "\
+Compute the checksum of the given package, and put it in the kill-ring
+
+\(fn PACKAGE &optional PACKAGE-STATUS-ALIST)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/el-get/el-get-list-packages"
+;;;;;;  "el-get/el-get-list-packages.el" "0017ef7cd7ec8bd66a6bf96c1f931d75")
+;;; Generated autoloads from el-get/el-get-list-packages.el
+
+(autoload 'el-get-list-packages "../../.dotfiles/.emacs.d/el-get/el-get/el-get-list-packages" "\
+Display a list of packages.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/google-maps/google-maps"
+;;;;;;  "google-maps/google-maps.el" "e93421b4ea6110eb4641c7ec4ae8524f")
+;;; Generated autoloads from google-maps/google-maps.el
+
+(autoload 'google-maps "../../.dotfiles/.emacs.d/el-get/google-maps/google-maps" "\
+Run Google Maps on LOCATION.
+If NO-GEOCODING is t, then does not try to geocode the address
+and do not ask the user for a more precise location.
+
+\(fn LOCATION &optional NO-GEOCODING)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/google-maps/google-maps-geocode"
+;;;;;;  "google-maps/google-maps-geocode.el" "9343a9b12c15aa227c1f491d8c9783af")
+;;; Generated autoloads from google-maps/google-maps-geocode.el
+
+(autoload 'google-maps-geocode-replace-region "../../.dotfiles/.emacs.d/el-get/google-maps/google-maps-geocode" "\
+Geocode region and replace it with a more accurate result.
+
+\(fn BEG END)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/google-maps/google-maps-static"
+;;;;;;  "google-maps/google-maps-static.el" "231b624de32b058113bd3a95a04eddde")
+;;; Generated autoloads from google-maps/google-maps-static.el
+
+(autoload 'google-maps-static-mode "../../.dotfiles/.emacs.d/el-get/google-maps/google-maps-static" "\
+A major mode for Google Maps service
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/google-maps/org-location-google-maps"
+;;;;;;  "google-maps/org-location-google-maps.el" "d6b4e32a868ac419a8336415c06eeb50")
+;;; Generated autoloads from google-maps/org-location-google-maps.el
+
+(autoload 'org-location-google-maps "../../.dotfiles/.emacs.d/el-get/google-maps/org-location-google-maps" "\
+Show Google Map for location of an Org entry in an org buffer.
+If WITH-CURRENT-LOCATION prefix is set, add a marker with current
+location.
+
+\(fn &optional WITH-CURRENT-LOCATION)" t nil)
+
+(autoload 'org-agenda-location-google-maps "../../.dotfiles/.emacs.d/el-get/google-maps/org-location-google-maps" "\
+Show Google Map for location of an Org entry in an org-agenda buffer.
+
+\(fn &optional WITH-CURRENT-LOCATION)" t nil)
+
+(autoload 'org-address-google-geocode-set "../../.dotfiles/.emacs.d/el-get/google-maps/org-location-google-maps" "\
+Set address property to LOCATION address for current entry using Google Geocoding API.
+
+\(fn LOCATION)" t nil)
+
+(autoload 'org-coordinates-google-geocode-set "../../.dotfiles/.emacs.d/el-get/google-maps/org-location-google-maps" "\
+Set coordinates property to LOCATION coordinates for current entry using Google Geocoding API.
+
+\(fn LOCATION)" t nil)
+
+(autoload 'org-google-maps-key-bindings "../../.dotfiles/.emacs.d/el-get/google-maps/org-location-google-maps" "\
+
+
+\(fn)" nil nil)
+
+(autoload 'org-agenda-google-maps-key-bindings "../../.dotfiles/.emacs.d/el-get/google-maps/org-location-google-maps" "\
+
+
+\(fn)" nil nil)
+(eval-after-load "org" '(org-google-maps-key-bindings))
+(eval-after-load "org-agenda" '(org-agenda-google-maps-key-bindings))
+
+;;;***
+
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/revive/revive"
+;;;;;;  "revive/revive.el" "9b6b2272468de83298b8a8736c117b91")
+;;; Generated autoloads from revive/revive.el
+
+(autoload 'current-window-configuration-printable "../../.dotfiles/.emacs.d/el-get/revive/revive" "\
+Return the printable current-window-configuration.
+This configuration will be stored by restore-window-configuration.
+Returned configurations are list of:
+'(Screen-Width Screen-Height Edge-List Buffer-List)
+
+Edge-List is a return value of revive:all-window-edges, list of all
+window-edges whose first member is always of north west window.
+
+Buffer-List is a list of buffer property list of all windows.  This
+property lists are stored in order corresponding to Edge-List.  Buffer
+property list is formed as
+'((buffer-file-name) (buffer-name) (point) (window-start)).
+
+\(fn)" nil nil)
+
+(autoload 'restore-window-configuration "../../.dotfiles/.emacs.d/el-get/revive/revive" "\
+Restore the window configuration.
+Configuration CONFIG should be created by
+current-window-configuration-printable.
+
+\(fn CONFIG)" nil nil)
+
+(autoload 'wipe "../../.dotfiles/.emacs.d/el-get/revive/revive" "\
+Wipe Emacs.
+
+\(fn)" t nil)
+
+(autoload 'save-current-configuration "../../.dotfiles/.emacs.d/el-get/revive/revive" "\
+Save current window/buffer configuration into configuration file.
+
+\(fn &optional NUM)" t nil)
+
+(autoload 'resume "../../.dotfiles/.emacs.d/el-get/revive/revive" "\
+Resume window/buffer configuration.
+Configuration should be saved by save-current-configuration.
+
+\(fn &optional NUM)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "../../.dotfiles/.emacs.d/el-get/twittering-mode/twittering-mode"
+;;;;;;  "twittering-mode/twittering-mode.el" "203cec8255bee0cfaac24951cba63a4a")
+;;; Generated autoloads from twittering-mode/twittering-mode.el
+
+(autoload 'twit "../../.dotfiles/.emacs.d/el-get/twittering-mode/twittering-mode" "\
+Start twittering-mode.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "el-get/el-get" "../../../.emacs.d/el-get/el-get/el-get.el"
+;;;;;;  "0365c8b39ba4508971d8f28aa88b64f9")
+;;; Generated autoloads from ../../../.emacs.d/el-get/el-get/el-get.el
 
 (autoload 'el-get-version "el-get/el-get" "\
 Message the current el-get version
@@ -1089,9 +1210,9 @@ Compute the checksum of the given package, and put it in the kill-ring
 
 ;;;***
 
-;;;### (autoloads (el-get-list-packages) "el-get/el-get-list-packages"
-;;;;;;  "el-get/el-get-list-packages.el" (21162 36542 0 0))
-;;; Generated autoloads from el-get/el-get-list-packages.el
+;;;### (autoloads nil "el-get/el-get-list-packages" "../../../.emacs.d/el-get/el-get/el-get-list-packages.el"
+;;;;;;  "0017ef7cd7ec8bd66a6bf96c1f931d75")
+;;; Generated autoloads from ../../../.emacs.d/el-get/el-get/el-get-list-packages.el
 
 (autoload 'el-get-list-packages "el-get/el-get-list-packages" "\
 Display a list of packages.
@@ -1100,150 +1221,20 @@ Display a list of packages.
 
 ;;;***
 
-;;;### (autoloads (google-maps) "google-maps/google-maps" "google-maps/google-maps.el"
-;;;;;;  (21162 36556 0 0))
-;;; Generated autoloads from google-maps/google-maps.el
-
-(autoload 'google-maps "google-maps/google-maps" "\
-Run Google Maps on LOCATION.
-If NO-GEOCODING is t, then does not try to geocode the address
-and do not ask the user for a more precise location.
-
-\(fn LOCATION &optional NO-GEOCODING)" t nil)
-
-;;;***
-
-;;;### (autoloads (google-maps-geocode-replace-region) "google-maps/google-maps-geocode"
-;;;;;;  "google-maps/google-maps-geocode.el" (21162 36556 0 0))
-;;; Generated autoloads from google-maps/google-maps-geocode.el
-
-(autoload 'google-maps-geocode-replace-region "google-maps/google-maps-geocode" "\
-Geocode region and replace it with a more accurate result.
-
-\(fn BEG END)" t nil)
-
-;;;***
-
-;;;### (autoloads (google-maps-static-mode) "google-maps/google-maps-static"
-;;;;;;  "google-maps/google-maps-static.el" (21162 36556 0 0))
-;;; Generated autoloads from google-maps/google-maps-static.el
-
-(autoload 'google-maps-static-mode "google-maps/google-maps-static" "\
-A major mode for Google Maps service
-
-\(fn)" t nil)
-
-;;;***
-
-;;;### (autoloads (org-google-weather) "google-weather/org-google-weather"
-;;;;;;  "google-weather/org-google-weather.el" (21162 36554 0 0))
-;;; Generated autoloads from google-weather/org-google-weather.el
-
-(autoload 'org-google-weather "google-weather/org-google-weather" "\
-Return Org entry with the weather for LOCATION in LANGUAGE.
-If LOCATION is not set, use org-google-weather-location.
-
-\(fn &optional LOCATION LANGUAGE)" nil nil)
-
-;;;***
-
-;;;### (autoloads (org-agenda-google-maps-key-bindings org-google-maps-key-bindings
-;;;;;;  org-coordinates-google-geocode-set org-address-google-geocode-set
-;;;;;;  org-agenda-location-google-maps org-location-google-maps)
-;;;;;;  "google-maps/org-location-google-maps" "google-maps/org-location-google-maps.el"
-;;;;;;  (21162 36556 0 0))
-;;; Generated autoloads from google-maps/org-location-google-maps.el
-
-(autoload 'org-location-google-maps "google-maps/org-location-google-maps" "\
-Show Google Map for location of an Org entry in an org buffer.
-If WITH-CURRENT-LOCATION prefix is set, add a marker with current
-location.
-
-\(fn &optional WITH-CURRENT-LOCATION)" t nil)
-
-(autoload 'org-agenda-location-google-maps "google-maps/org-location-google-maps" "\
-Show Google Map for location of an Org entry in an org-agenda buffer.
-
-\(fn &optional WITH-CURRENT-LOCATION)" t nil)
-
-(autoload 'org-address-google-geocode-set "google-maps/org-location-google-maps" "\
-Set address property to LOCATION address for current entry using Google Geocoding API.
-
-\(fn LOCATION)" t nil)
-
-(autoload 'org-coordinates-google-geocode-set "google-maps/org-location-google-maps" "\
-Set coordinates property to LOCATION coordinates for current entry using Google Geocoding API.
-
-\(fn LOCATION)" t nil)
-
-(autoload 'org-google-maps-key-bindings "google-maps/org-location-google-maps" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'org-agenda-google-maps-key-bindings "google-maps/org-location-google-maps" "\
-
-
-\(fn)" nil nil)
-(eval-after-load "org" '(org-google-maps-key-bindings))
-(eval-after-load "org-agenda" '(org-agenda-google-maps-key-bindings))
-
-;;;***
-
-;;;### (autoloads (resume save-current-configuration wipe restore-window-configuration
-;;;;;;  current-window-configuration-printable) "revive/revive" "revive/revive.el"
-;;;;;;  (21162 36556 0 0))
-;;; Generated autoloads from revive/revive.el
-
-(autoload 'current-window-configuration-printable "revive/revive" "\
-Return the printable current-window-configuration.
-This configuration will be stored by restore-window-configuration.
-Returned configurations are list of:
-'(Screen-Width Screen-Height Edge-List Buffer-List)
-
-Edge-List is a return value of revive:all-window-edges, list of all
-window-edges whose first member is always of north west window.
-
-Buffer-List is a list of buffer property list of all windows.  This
-property lists are stored in order corresponding to Edge-List.  Buffer
-property list is formed as
-'((buffer-file-name) (buffer-name) (point) (window-start)).
-
-\(fn)" nil nil)
-
-(autoload 'restore-window-configuration "revive/revive" "\
-Restore the window configuration.
-Configuration CONFIG should be created by
-current-window-configuration-printable.
-
-\(fn CONFIG)" nil nil)
-
-(autoload 'wipe "revive/revive" "\
-Wipe Emacs.
-
-\(fn)" t nil)
-
-(autoload 'save-current-configuration "revive/revive" "\
-Save current window/buffer configuration into configuration file.
-
-\(fn &optional NUM)" t nil)
-
-(autoload 'resume "revive/revive" "\
-Resume window/buffer configuration.
-Configuration should be saved by save-current-configuration.
-
-\(fn &optional NUM)" t nil)
-
-;;;***
-
-;;;### (autoloads (twit) "twittering-mode/twittering-mode" "twittering-mode/twittering-mode.el"
-;;;;;;  (21472 54477 678518 782000))
-;;; Generated autoloads from twittering-mode/twittering-mode.el
-
-(autoload 'twit "twittering-mode/twittering-mode" "\
-Start twittering-mode.
-
-\(fn)" t nil)
+;;;### (autoloads nil nil ("../../../.emacs.d/el-get/el-get/el-get-autoloads.el"
+;;;;;;  "../../../.emacs.d/el-get/el-get/el-get-build.el" "../../../.emacs.d/el-get/el-get/el-get-byte-compile.el"
+;;;;;;  "../../../.emacs.d/el-get/el-get/el-get-core.el" "../../../.emacs.d/el-get/el-get/el-get-custom.el"
+;;;;;;  "../../../.emacs.d/el-get/el-get/el-get-dependencies.el"
+;;;;;;  "../../../.emacs.d/el-get/el-get/el-get-install.el" "../../../.emacs.d/el-get/el-get/el-get-list-packages.el"
+;;;;;;  "../../../.emacs.d/el-get/el-get/el-get-methods.el" "../../../.emacs.d/el-get/el-get/el-get-notify.el"
+;;;;;;  "../../../.emacs.d/el-get/el-get/el-get-recipes.el" "../../../.emacs.d/el-get/el-get/el-get-status.el"
+;;;;;;  "../../../.emacs.d/el-get/el-get/el-get.el" "anything/anything-config.el"
+;;;;;;  "anything/anything-match-plugin.el" "anything/anything.el"
+;;;;;;  "el-get/el-get-list-packages.el" "el-get/el-get.el" "google-maps/google-maps-geocode.el"
+;;;;;;  "google-maps/google-maps-static.el" "google-maps/google-maps.el"
+;;;;;;  "google-maps/org-location-google-maps.el" "google-weather/org-google-weather.el"
+;;;;;;  "revive/revive.el" "twittering-mode/twittering-mode.el")
+;;;;;;  (21723 24217 803913 508000))
 
 ;;;***
 

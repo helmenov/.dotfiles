@@ -60,31 +60,24 @@
 ;(setq twittering-icon-mode t)             ;;アイコンを表示
 (setq twittering-timer-interval 60)       ;;60秒ごとにタイムラインを更新する
 (setq browse-url-browser-function 
-      'browse-url-generic 
+;;      'browse-url-generic 
 ;;      'w3m-browse-url
+      'eww-browse-url
 )
 (setq browse-url-generic-program "google-chrome");;リンクを開くウェブブラウザをGoogleChromeにする！！！
 
 (setq twittering-tinyurl-service 
-      'hane.jp
-;;      'migre.me
+;;      'hane.jp
+      'migre.me
 )
 (require 'revive)
 (twittering-setup-revive)
 (setq twittering-proxy-use t)
 (setq twittering-proxy-server "127.0.0.1")
 (setq twittering-proxy-port 8123)
-(setq twittering-connection-type-order '(curl wget native))
+(setq twittering-connection-type-order '(wget curl native))
 (setq twittering-status-format "%i @%s / %S %p: \n %T\n [%@]%r %R %f%L\n")
 (setq twittering-retweet-format " RT @%s: %t")
-(add-hook 'twittering-new-tweets-hook (lambda ()
-   (let ((n twittering-new-tweets-count))
-     (start-process "twittering-notify" nil "notify-send"
-                    "-i" "/usr/share/pixmaps/gnome-emacs.png"
-                    "New tweets"
-                    (format "You have %d new tweet%s"
-                            n (if (> n 1) "s" ""))))))
-
 
 ;;== Anything.el ==
 ;;(add-to-list 'load-path "~/.emacs.d/auto-install/anything/")
@@ -250,9 +243,12 @@
 
 (load-file "/home/kotaro/.emacs.d/config/.emacs_bpe.el")
 
+(load-file "/home/kotaro/.emacs.d/.emacs.manued")
+
 ;; == at last ==
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
 (condition-case err
     (load "config/packages/local")
   (error))
+

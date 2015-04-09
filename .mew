@@ -14,6 +14,7 @@
 ;;(load-file "~/.mew.d/.mew.CcCe")
 (load-file "~/.mew.d/.mew.xml")
 ;;(load-file "~/.mew.d/.mew.w3m-mail")
+(load-file "~/.mew.d/.mew.pdf")
 
 (setq mew-prog-ssl "/usr/bin/stunnel4")
 (setq mew-ssl-cert-directory "/etc/ssl/certs")
