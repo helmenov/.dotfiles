@@ -1,0 +1,18 @@
+;; ~/.mew に以下のような記述を加えます。
+(load "mew-ldap")
+(setq mew-ldap-server "localhost")
+(define-key mew-draft-header-map "\C-i" 'mew-ldap-header-comp)
+(define-key mew-header-mode-map "\C-i" 'mew-ldap-header-comp)
+
+;; LDAPへの問い合わせを常に行いたい場合はt
+(setq mew-ldap-use t)
+
+;; Mewのアドレス補完は前方一致で行なわれるため、デフォルトではLDAP検索
+;; についても前方一致で行なわれます。以下の設定により、LDAP検索を部分
+;; 一致検索にすることができます。
+;;
+(setq mew-ldap-use-substring-search t)
+
+;; UTF-8の使用できる環境(Emacs-20.6 + mule-ucsなど)では、以下の設定に
+;; より、ローカル言語(例えば日本語)の名前(cn)を利用できます。
+(setq mew-ldap-use-local-lang-value t)

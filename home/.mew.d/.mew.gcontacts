@@ -1,0 +1,4 @@
+;; google-contacs-mew
+(require 'google-contacts-mew)
+(setq google-contacts-email "kotaro1976@gmail.com")
+

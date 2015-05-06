@@ -1,0 +1,8 @@
+(setq mew-prog-text/html-ext "iceweasel")
+(setq mew-prog-text/html-ext-arg '("-remote" "openFile(%s)"))
+;;(setq mew-prog-text/xml nil) ;; 'mew-mime-text/html-w3m
+(setq mew-prog-text/xml-ext "iceweasel")
+(setq mew-prog-text/xml-ext-arg '("-remote" "openFile(%s)"))
+;;(setq mew-prog-application/xml nil)
+(setq mew-prog-application/xml-ext "iceweasel")
+(setq mew-prog-application/xml-ext-arg '("-remote" "openFile(%s)"))

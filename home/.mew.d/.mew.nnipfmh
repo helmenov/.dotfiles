@@ -1,0 +1,29 @@
+(require 'mew-absfilter)
+(mew-absfilter-mode 1)
+; put "D"
+(defun mew-spam-bsfilter (val)
+  (let ((case-fold-search t))
+    (if (string-match "yes" val) ?D)))
+
+; put "o +sapm" at inc
+;(defun mew-spam-bsfilter (val)
+;  (let ((case-fold-search t))
+;    (if (string-match "yes" val) "+spam")))
+
+(setq mew-inbox-action-alist
+      '(("X-Spam-Flag:" mew-spam-bsfilter)))
+
+; for "ls" (learn-spam)
+(setq mew-spam-prog "nnipfmh")
+(setq mew-spam-prog-args '("-b" "-u"))
+
+; for "lh" (learn-ham)
+(setq mew-ham-prog "nnipfmh")
+(setq mew-ham-prog-args '("-g" "-u"))
+
+; show X-Spam-Flag and X-Spam-Probability in message buffer
+(setq mew-field-spec
+      (reverse (append (list (car (reverse mew-field-spec)))
+		       '(("^X-Spam-Probability:$" t)
+			 ("^X-Spam-Flag:$" t))
+		       (cdr (reverse mew-field-spec)))))

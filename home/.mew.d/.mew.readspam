@@ -1,0 +1,48 @@
+;; SPAM¤ò¤è¤à http://ko.meadowy.net/~shirai/diary/20050119.html#p01
+
+(add-hook 'mew-summary-mode-hook
+    (lambda ()
+      (define-key mew-summary-mode-map "`" 'mew-force-view-strange-message)))
+
+(defconst mew--fake--decode nil)
+(defun mew-force-view-strange-message (&optional arg)
+  (interactive "P")   
+    (mew-summary-msg-or-part   
+     (mew-summary-goto-message)
+     (let ((mew-cs-database-for-decoding mew-cs-database-for-decoding)
+     (mew--fake--decode t)
+     (mew-decode-broken t)
+     (mew-use-name-parameter t)
+     (mew-use-alternative nil)
+     (mew-use-text-body t)
+     (orig-lang current-language-environment)
+     lang cs-env)
+       (when arg
+   (setq cs-env (mew-set-language-environment-coding-systems lang)))
+       (setq mew-cs-database-for-decoding
+       (cons '("unknown" . undecided) mew-cs-database-for-decoding))
+       (unwind-protect
+     (mew-summary-analyze-again)
+   (when (and arg cs-env)
+     (mew-reset-coding-systems (car cs-env) (cdr cs-env)))))))
+
+(defadvice mew-header-decode (around fake-decode activate)
+  (if mew--fake--decode (ad-set-arg 0 "unknown"))
+  ad-do-it)
+
+(defadvice mew-decode-charset-conv (around fake-decode activate)
+  (when mew--fake--decode
+    (mew-xinfo-set-warning
+     (cons "Charset FAKE!!\n" (mew-xinfo-get-warning)))
+    (when (eq mew--fake--decode 'mime)
+      (mew-xinfo-set-warning
+       (cons "Mime-Version: FAKE!!\n" (mew-xinfo-get-warning))))
+    (ad-set-arg 0 "unknown"))
+  ad-do-it)
+
+(defadvice mew-decode-rfc822-header (after fake-decode activate)
+  ;; (list mimep subj from)
+  (when (and mew--fake--decode
+       (not (car ad-return-value)))
+    (setq mew--fake--decode 'mime)
+    (setcar ad-return-value t)))

@@ -1,0 +1,29 @@
+;; semiとc-sigとの干渉を防ぐ
+(setq mime-setup-use-signature nil)
+
+(autoload 'add-signature "c-sig" "c-sig" t)
+(autoload 'delete-signature "c-sig" "c-sig" t)
+(autoload 'insert-signature-eref "c-sig" "c-sig" t)
+(autoload 'insert-signature-automatically "c-sig" "c-sig" t)
+(autoload 'insert-signature-randomly "c-sig" "c-sig" t)
+
+(autoload 'write-sig-file "c-sig" "c-sig" t)
+(autoload 'read-sig-file "c-sig" "c-sig" t)
+
+(random t)
+(setq sig-replace-string t)
+(setq sig-replace-string-file "/home/kotaro/etc/.signature.replace")
+
+(setq sig-alist-file "/home/kotaro/etc/.signature.alist")
+
+(setq sig-insert-end t)
+(setq sig-save-to-sig-name-alist nil)
+(setq message-signarue-file nil)
+
+;; Mewでシグネチャを対話的に選択する
+;; M-x add-signatureで登録
+(add-hook 'mew-draft-mode-hook
+   (function
+    (lambda ()
+       (define-key mew-draft-mode-map "\C-c\C-i" 'insert-signature-eref)
+)))

@@ -1,0 +1,153 @@
+(define-key mew-summary-mode-map "t1" 'mew-get-msgid-inrepto)
+(define-key mew-summary-mode-map "t2" 'mew-put-msgid-inrepto)
+(define-key mew-summary-mode-map "t3" 'mew-remove-msgid-inrepto)
+
+(defvar mew-get-msgid nil)
+
+(defun mew-get-msgid-inrepto ()
+  "親の Message-ID を取得する"
+  (interactive)
+  (setq mew-get-msgid nil)
+  (if (mew-summary-case1)
+    (save-excursion
+      (mew-summary-goto-message)
+      (beginning-of-line)
+      (when (looking-at "[^\r]+\r \\(<[^>]+>\\) ")
+  (setq mew-get-msgid (mew-match-string 1)))
+      (if mew-get-msgid
+    (message "Message-Id: %s" mew-get-msgid)
+  (message "No Message-Id: detect")))
+    (message "Not execute this buffer")))
+
+(defun mew-put-msgid-inrepto ()
+  "親の Message-ID を In-Reply-To に無理やり付ける"
+  (interactive)
+  (if (not (mew-summary-or-virtual-p))
+      (message "This command can be used in Mew.")
+    (let (addrep)
+      (save-excursion
+  (mew-summary-not-in-queue
+   (mew-summary-not-in-draft
+    (mew-summary-goto-message)
+    (let* ((fld (mew-summary-folder-name))
+     (msg (mew-summary-message-number))
+     (file (mew-expand-folder fld msg))
+     exist pos end)
+      (if (and (looking-at "[^\r]+\r \\(<[^>]+>\\) ")
+         (string=  mew-get-msgid (mew-match-string 1)))
+    (message "Same Message-ID detect.")
+        (if (null mew-get-msgid)
+      (message "No Prev Message-Id:")
+    (when (y-or-n-p (format "Add In-Reply-To: %s? " mew-get-msgid))
+      (with-temp-buffer
+        (mew-frwlet
+         mew-cs-text-for-read mew-cs-text-for-write
+         (insert-file-contents file)
+         (setq exist (or (mew-header-get-value "In-Reply-To:")
+             (mew-header-get-value "References:")))
+         (if (and exist
+            (not (y-or-n-p "Exist In-Reply-To: or References: Replace? ")))
+       (message "Exist In-Reply-To: or References:")
+           (goto-char (point-min))
+           (if (re-search-forward "\n\\(\n\\)" nil t)
+         (setq end (match-beginning 1))
+       (setq end (point-max)))
+           (goto-char (point-min))
+           (if (re-search-forward "^In-Reply-To:" end t)
+         (progn
+           (beginning-of-line)
+           (insert "X-Mew-")
+           (beginning-of-line))
+       (goto-char (point-min))
+       (if (re-search-forward "Message-ID:" end t)
+           (beginning-of-line)
+         (if (re-search-forward "\n\\(\n\\)" nil t)
+             (goto-char (match-beginning 1)))))
+           (mew-header-insert "In-Reply-To:"
+            (concat mew-get-msgid " (Inserted Mew)")
+            'nofold)
+           (mew-fake-inrep-sub file fld msg)))
+        (setq addrep t)))))))))
+      (when addrep
+  (when (mew-thread-p)
+    (let ((lines (count-lines (point-min) (point-max))))
+      (mew-summary-make-thread)
+      ;; "mt" じゃなさそうなので、再表示する
+      (when (= lines (count-lines (point-min) (point-max)))
+        (mew-summary-make-thread))))
+  (message "Add In-Reply-To: %s done" mew-get-msgid)))))
+
+(defun mew-remove-msgid-inrepto ()
+  "無理やりつけた In-Reply-To をはずす"
+  (interactive)
+  (if (not (mew-summary-or-virtual-p))
+      (message "This command can be used in Mew.")
+    (let (modp)
+      (save-excursion
+  (mew-summary-not-in-queue
+   (mew-summary-not-in-draft
+    (mew-summary-goto-message)
+    (let ((fld (mew-summary-folder-name))
+    (msg (mew-summary-message-number))
+    file xinrep mewinrep pos end)
+      (when (and fld msg)
+        (setq file (mew-expand-folder fld msg))
+        (with-temp-buffer
+    (mew-frwlet
+     mew-cs-text-for-read mew-cs-text-for-write
+     (insert-file-contents file)
+     (set-buffer-modified-p nil)
+     (goto-char (point-min))
+     (if (re-search-forward "\n\\(\n\\)" nil t)
+         (setq end (match-beginning 1))
+       (setq end (point-max)))
+     (goto-char (point-min))
+     (setq xinrep (mew-header-get-value "X-Mew-In-Reply-To:"))
+     (when (setq mewinrep (mew-header-get-value "In-Reply-To:"))
+       (setq mewinrep (string-match " (Inserted Mew)$" mewinrep)))
+     (goto-char (point-min))
+     (when (and mewinrep
+          (re-search-forward "^In-Reply-To:" end t))
+       (goto-char (match-beginning 0))
+       (setq pos (point))
+       (forward-line 1)
+       (mew-header-goto-next)
+       (delete-region pos (point)))
+     (goto-char (point-min))
+     (when (and xinrep
+          (re-search-forward "^\\(X-Mew-\\)In-Reply-To:" end t))
+       (delete-region (match-beginning 1) (match-end 1)))
+     (when (setq modp (buffer-modified-p))
+       (mew-fake-inrep-sub file fld msg)))))))))
+      (if modp
+    (let (lines)
+      (when (mew-thread-p)
+        (setq lines (count-lines (point-min) (point-max)))
+        (mew-summary-make-thread)
+        (when (= lines (count-lines (point-min) (point-max)))
+    (mew-summary-make-thread)))
+      (message "Remove In-Reply-To inserted by Mew."))
+  (message "No In-Reply-To inserted by Mew.")))))
+
+(defun mew-fake-inrep-sub (file fld msg)
+  (write-region (point-min) (point-max) file nil 'nomsg)
+  (save-excursion
+    (if (get-buffer fld)
+  (set-buffer fld)
+      (mew-summary-visit-folder fld)
+      (while (processp mew-summary-buffer-process)
+  (sit-for 1)
+  (discard-input)))
+    (unless (mew-sinfo-get-scan-form)
+      (mew-sinfo-set-scan-form (mew-summary-scan-form fld))))
+  (set-buffer-multibyte t)
+  (let ((width (1- (mew-scan-width)))
+  (vec (if (fboundp 'mew-pop-scan-header)
+     (mew-pop-scan-header)
+         (mew-scan-header))))
+    (mew-scan-set-folder vec fld)
+    (mew-scan-set-message vec msg)
+    (mew-scan-insert-line fld vec width msg nil))
+  (set-buffer fld)
+  (mew-summary-folder-cache-save))
+
