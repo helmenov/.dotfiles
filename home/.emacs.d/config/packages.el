@@ -84,23 +84,6 @@
 (setq twittering-pop-to-buffer-function 'pop-to-buffer)
 (setq twittering-display-remaining t)
 
-;;== Anything.el ==
-;;(add-to-list 'load-path "~/.emacs.d/auto-install/anything/")
-(let ((original-browse-url-browser-function browse-url-browser-function))
-  (el-get 'sync '(anything))
-  (require 'anything-config)
-  (anything-set-anything-command-map-prefix-key
-   'anything-command-map-prefix-key "C-c C-<SPC>")
-  (define-key global-map (kbd "C-x b") 'anything-for-files)
-  (define-key global-map (kbd "C-x g") 'anything-imenu) ; experimental
-  (define-key global-map (kbd "M-y") 'anything-show-kill-ring)
-  (define-key anything-map (kbd "C-z") nil)
-  (define-key anything-map (kbd "C-l") 'anything-execute-persistent-action)
-  (define-key anything-map (kbd "C-o") nil)
-  (define-key anything-map (kbd "C-M-n") 'anything-next-source)
-  (define-key anything-map (kbd "C-M-p") 'anything-previous-source)
-  (setq browse-url-browser-function original-browse-url-browser-function))
-
 ;; text-translator
 (add-to-list 'load-path "~/.emacs.d/auto-install/text-translator")
 (require 'text-translator-load)
