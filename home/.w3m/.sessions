@@ -1,7 +1,11 @@
 ;;; .sessions  -*- mode: emacs-lisp; coding: iso-2022-7bit -*-
 ;; This file is generated automatically by emacs-w3m v1.4.538.
 
-(("自動保存-1"
+(("クラッシュ回復"
+  (21840 5917 922543 749000)
+  (("http://blogs.wsj.com/digits/2015/05/08/englishnization-advances-at-rakuten/" nil nil "‘Englishnization’ Advances at Rakuten - Digits - WSJ"))
+  nil)
+ ("自動保存-1"
   (21693 47506 366181 577000)
   (("about:" nil nil "About emacs-w3m") ("http://nakano-hito.com/?p=1666" (0) (("about:" (:title "About emacs-w3m") (0) :window-start 1 :position (1 . 0) :window-hscroll 0)) "クックパッドが金融業を始める可能性がある件。 | ネットビジネスの中の人のブログ"))
   0)

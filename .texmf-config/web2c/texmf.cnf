@@ -1,8 +1,0 @@
-% user-specific texmf.cnf
-% TEXMFDBS
-TEXMFDBS = {!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFLOCAL,!!$TEXMFDIST,!!$TEXMFHOME}
-
-% SHELL ESCAPE COMMANDS
-shell_escape_commands = bibtex,bibtex8,bibtexu,pbibtex,upbibtex,biber,kpsewhich,makeindex,mendex,texindy,mpost,pmpost,upmpost,repstopdf,epspdf,extractbb,
-
-

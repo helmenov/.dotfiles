@@ -1,3 +1,0 @@
-# m h dom mon dow user  command
-0 * * * * find ~/Dropbox -name '*競合コピー*' -exec rm {} \;
-1 * * * * chmod -R +w ~/Dropbox

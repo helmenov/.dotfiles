@@ -1,4 +1,0 @@
-(if (boundp 'mail-user-agent)
-    (setq mail-user-agent 'mew-user-agent)
-)
-;

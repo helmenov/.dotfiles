@@ -1,8 +1,0 @@
-;; 半角カナはISO-2022-JPとして許していないが，緩やかにするため
-;; iso-2022-jpに対応する Emacs のコードを iso-2022-jpではなく
-;; iso-2022-7bit に指定 (ただし，base64になる)
-  (add-hook 'mew-init-hook
-            '(lambda ()
-               (setq mew-cs-database-for-decoding
-                     (cons '("iso-2022-jp" . iso-2022-7bit)
-                           mew-cs-database-for-decoding))))

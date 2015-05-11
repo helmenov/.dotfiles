@@ -1,4 +1,0 @@
-(require 'izonmoji-mode)
-(add-hook 'mew-message-mode-hook 'izonmoji-mode-on)
-(add-hook 'wl-message-redisplay-hook 'izonmoji-mode-on)
-(add-hook 'w3m-mode-hook 'izonmoji-mode-on)

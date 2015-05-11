@@ -11,7 +11,7 @@
 (unless (require 'el-get nil t)
   (with-current-buffer
       (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
     (end-of-buffer)
     (eval-print-last-sexp)))
 ;; レシピ置き場

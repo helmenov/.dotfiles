@@ -1,3 +1,0 @@
-(add-hook 'mew-init-hook
-      (lambda ()
-        (require 'mew-caesar)))

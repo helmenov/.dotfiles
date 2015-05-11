@@ -1,9 +1,0 @@
-(defadvice mew-mime-application/octet-stream (around exec-office activate)
-  (cond
-   ((and fl (string-match "\\.doc$" fl))
-    (mew-mime-application/msword cache begin end params))
-   ((and fl (string-match "\\.xls$" fl))
-    (mew-mime-application/msexcel cache begin end params))
-   ((and fl (string-match "\\.ppt$" fl))
-    (mew-mime-application/mspowerpoint cache begin end params))
-   (t ad-do-it)))

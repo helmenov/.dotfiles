@@ -1,5 +1,0 @@
-	(:name minor-mode-hack
-	:auto-generated t
-	:type emacswiki
-	:description "Hack of minor-modes"
-	:website "https://raw.github.com/emacsmirror/emacswiki.org/master/minor-mode-hack.el")

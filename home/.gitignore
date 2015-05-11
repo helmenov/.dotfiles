@@ -4,4 +4,5 @@
 .emacs.d/url/
 .texmf-var/luatex-cache/
 .texmf-var/fonts/
+.*~
 
