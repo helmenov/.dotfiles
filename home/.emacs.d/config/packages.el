@@ -7,19 +7,24 @@
 ;;=========================================================================
 ;;= el-get
 ;;=========================================================================
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(unless (require 'el-get nil t)
+(when load-file-name
+  (setq user-emacs-directory (file-name-directory load-file-name)))
+(let ((versioned-dir (locate-user-emacs-file emacs-version)))
+  (setq el-get-dir (expand-file-name "el-get" versioned-dir)
+        package-user-dir (expand-file-name "elpa" versioned-dir)))
+(add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
+(unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
        "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (end-of-buffer)
+    (goto-char (point-max))
     (eval-print-last-sexp)))
 ;; レシピ置き場
 (add-to-list 'el-get-recipe-path
              (concat (file-name-directory load-file-name) "/el-get/recipes"))
 ;; 追加のレシピ置き場
 (add-to-list 'el-get-recipe-path
-             "~/.emacs.d/config/el-get/local-recipes")
+             (concat (file-name-directory load-file-name) "/el-get/local-recipes"))
 
 ;; == el-get-ext : el-get拡張 ==
 (load "~/.emacs.d/packages/2010-12-09-095707.el-get-ext.el")
@@ -32,7 +37,6 @@
 
 ;; == auto-install ==
 (el-get 'sync '(auto-install))
-;;(add-to-list 'load-path "~/.emacs.d/auto-install/auto-install/")
 (require 'auto-install)
 ; wget を使わない場合
 ;(setq auto-install-use-wget nil)
@@ -52,9 +56,6 @@
 ;; == el-get/twittering-mode ==
 (setq twittering-allow-insecure-server-cert t)
 (el-get 'sync '(twittering-mode))
-(el-get 'sync '(revive))
-;;(add-to-list 'load-path "~/.emacs.d/auto-install/twittering-mode/")
-;;(add-to-list 'load-path "~/.emacs.d/packages/revive/")
 (require 'twittering-mode)
 (setq twittering-use-master-password t)
 ;(setq twittering-icon-mode t)             ;;アイコンを表示
@@ -71,6 +72,8 @@
 ;;      'migre.me
       'goo.gl
 )
+
+(el-get 'sync '(revive))
 (require 'revive)
 (twittering-setup-revive)
 (setq twittering-proxy-use t)
@@ -85,7 +88,7 @@
 (setq twittering-display-remaining t)
 
 ;; text-translator
-(add-to-list 'load-path "~/.emacs.d/auto-install/text-translator")
+(el-get 'sync '(text-translator))
 (require 'text-translator-load)
 ;; グローバルキーの設定例
 (global-set-key "\C-x\M-t" 'text-translator)
